@@ -31,6 +31,10 @@ input, select, button {
     margin-top: 5px;
 }
 
+input {
+    width: 96%;
+}
+
 button {
     background-color: #28a745;
     color: white;

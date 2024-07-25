@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Activity Dashboard</title>
+    <link rel="stylesheet" href="dash_styles.css">
+</head>
+<body>
+    <h1>Driver Activity Dashboard</h1>
+    <p id="loadingText" hidden>Loading Data...</p>
+    <table id="activityTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Driver Name</th>
+                <th>Net Weight</th>
+                <th>Reg</th>
+                <th>Log Count</th>
+                <th>Image URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data rows will be appended here -->
+        </tbody>
+    </table>
+    <script type="module" src="dashboard_app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/umd/supabase.js"></script>
+</body>
+</html>

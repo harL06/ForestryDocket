@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forestry Docket System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="docket-form">
+
+        <div class="form-section">
+            <h2>Section A: Log Counting</h2>
+            <h3>Upload Image</h3>
+            <p>Ensure entire load and vehicle registration are visible</p>
+            <input type="file" id="fileInput" accept="image/*">
+            <button id="uploadButton" disabled>Upload</button>
+            <p id="imageLink"></p>
+            <button id="nextButton" disabled hidden>Next</button>
+
+        </div>
+
+        <script type="module" src="capture_app copy.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/umd/supabase.js"></script>
+    </form>
+</body>
+</html>

@@ -41,3 +41,11 @@ button {
 button:hover {
     background-color: #218838;
 }
+
+#videoElement {
+    width: 100%;
+    max-width: 400px;
+}
+#canvas {
+    display: none;
+}

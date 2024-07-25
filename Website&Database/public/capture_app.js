@@ -19,13 +19,21 @@ const nextButton = document.getElementById('nextButton');
 const canvas = document.getElementById('canvas');
 const imageLink = document.getElementById('imageLink');
 
-// Set up video stream
-navigator.mediaDevices.getUserMedia({ video: true })
+// Set up video stream with back camera
+navigator.mediaDevices.enumerateDevices()
+  .then(devices => {
+    const videoDevices = devices.filter(device => device.kind === 'videoinput');
+    const rearCamera = videoDevices.find(device => device.label.toLowerCase().includes('back') || device.label.toLowerCase().includes('rear'));
+
+    return navigator.mediaDevices.getUserMedia({
+      video: { deviceId: rearCamera ? rearCamera.deviceId : undefined }
+    });
+  })
   .then(stream => {
     videoElement.srcObject = stream;
   })
   .catch(err => {
-    console.error('Error accessing webcam:', err);
+    console.error('Error accessing camera:', err);
   });
 
 // Capture image and freeze video
@@ -86,7 +94,6 @@ uploadButton.addEventListener('click', (event) => {
   captureButton.disabled = true;
   captureButton.hidden = true;
 
-  // Check if nextButton exists before modifying it
   if (nextButton) {
     nextButton.hidden = false;  // Show the button
     nextButton.disabled = false; // Enable the button
@@ -98,7 +105,6 @@ uploadButton.addEventListener('click', (event) => {
 
   canvas.toBlob(async (blob) => {
     if (blob) {
-      // Create a unique file name based on the current date and time
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const fileName = `image_${timestamp}.png`;
       const file = new File([blob], fileName, { type: 'image/png' });

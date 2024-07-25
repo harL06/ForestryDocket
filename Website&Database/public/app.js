@@ -34,6 +34,7 @@ captureButton.addEventListener('click', (event) => {
   context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
   uploadButton.disabled = false; // Enable upload button
   resetButton.disabled = false;  // Enable reset button
+  captureButton.disabled = true;
   videoElement.pause(); // Pause the video to freeze the frame
 });
 
@@ -43,6 +44,7 @@ resetButton.addEventListener('click', (event) => {
   videoElement.play(); // Resume video playback
   uploadButton.disabled = true; // Disable upload button
   resetButton.disabled = true;  // Disable reset button
+  captureButton.disabled = false;
   imageLink.textContent = ''; // Clear the image link
 });
 
@@ -72,6 +74,9 @@ async function uploadImage(file) {
 // Upload the captured image to Supabase
 uploadButton.addEventListener('click', (event) => {
   event.preventDefault(); // Prevent the form from submitting
+  uploadButton.disabled = true;
+  resetButton.disabled = true;
+  captureButton.diabled = true;
   imageLink.textContent = 'Loading...'; // Show loading message
 
   canvas.toBlob(async (blob) => {

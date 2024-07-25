@@ -38,14 +38,27 @@ button {
     cursor: pointer;
 }
 
+button:disabled {
+    background-color: grey;
+    color: white;
+    border: none;
+    pointer-events: none;
+}
+
+
 button:hover {
     background-color: #218838;
 }
 
+button:disabled:hover {
+    background-color: grey;
+    pointer-events: none;
+}
+
 #videoElement {
     width: 100%;
-    max-width: 400px;
 }
 #canvas {
     display: none;
+
 }

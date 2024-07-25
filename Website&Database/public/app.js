@@ -13,6 +13,9 @@ const videoElement = document.getElementById('videoElement');
 const captureButton = document.getElementById('captureButton');
 const resetButton = document.getElementById('resetButton');
 const uploadButton = document.getElementById('uploadButton');
+
+const nextButton = document.getElementById('nextButton');
+
 const canvas = document.getElementById('canvas');
 const imageLink = document.getElementById('imageLink');
 
@@ -75,8 +78,22 @@ async function uploadImage(file) {
 uploadButton.addEventListener('click', (event) => {
   event.preventDefault(); // Prevent the form from submitting
   uploadButton.disabled = true;
+  uploadButton.hidden = true;
+
   resetButton.disabled = true;
-  captureButton.diabled = true;
+  resetButton.hidden = true;
+
+  captureButton.disabled = true;
+  captureButton.hidden = true;
+
+  // Check if nextButton exists before modifying it
+  if (nextButton) {
+    nextButton.hidden = false;  // Show the button
+    nextButton.disabled = false; // Enable the button
+  } else {
+    console.error('nextButton not found in the DOM.');
+  }
+
   imageLink.textContent = 'Loading...'; // Show loading message
 
   canvas.toBlob(async (blob) => {
@@ -85,7 +102,7 @@ uploadButton.addEventListener('click', (event) => {
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const fileName = `image_${timestamp}.png`;
       const file = new File([blob], fileName, { type: 'image/png' });
-      
+
       const result = await uploadImage(file);
       if (result) {
         const { data: { publicUrl }, error } = supabase
@@ -104,6 +121,12 @@ uploadButton.addEventListener('click', (event) => {
       }
     }
   }, 'image/png');
+});
+
+// Navigate to next page on clicking the next button
+nextButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  window.location.href = 'docket_form.html'; // Redirect to docket_form.html
 });
 
 // document.getElementById('docket-form').addEventListener('submit', async function(event) {
@@ -125,7 +148,7 @@ uploadButton.addEventListener('click', (event) => {
 //         }
 
 //         const fileName = `images/${Date.now()}.png`; // Generate a unique file name
-        
+
 //         // Upload image to Supabase Storage
 //         const { data: storageData, error: storageError } = await supabase
 //             .storage

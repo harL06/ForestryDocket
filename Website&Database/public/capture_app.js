@@ -116,6 +116,7 @@ uploadButton.addEventListener('click', (event) => {
 
         imageLink.textContent = `Image URL: ${publicUrl}`;
         imageLink.href = publicUrl;
+        localStorage.setItem('capturedImageUrl', publicUrl);
       } else {
         imageLink.textContent = 'Error uploading the image.';
       }
@@ -128,74 +129,3 @@ nextButton.addEventListener('click', (event) => {
   event.preventDefault();
   window.location.href = 'docket_form.html'; // Redirect to docket_form.html
 });
-
-// document.getElementById('docket-form').addEventListener('submit', async function(event) {
-//     event.preventDefault();
-
-//     const formData = new FormData(event.target);
-//     const data = {};
-//     formData.forEach((value, key) => {
-//         data[key] = value;
-//     });
-
-//     try {
-//         // Retrieve blob from hidden input field
-//         const blob = logImageInput.dataset.blob;
-
-//         // Ensure that the blob and fileName are available
-//         if (!blob) {
-//             throw new Error('No image blob found.');
-//         }
-
-//         const fileName = `images/${Date.now()}.png`; // Generate a unique file name
-
-//         // Upload image to Supabase Storage
-//         const { data: storageData, error: storageError } = await supabase
-//             .storage
-//             .from('image_logs')
-//             .upload(fileName, blob, {
-//                 contentType: 'image/png' // Ensure this matches the actual MIME type
-//             });
-
-//         if (storageError) {
-//             console.error('Upload error:', storageError);
-//             throw storageError;
-//         }
-
-//         // Get the public URL for the uploaded image
-//         const { publicURL, error: urlError } = supabase
-//             .storage
-//             .from('image_logs')
-//             .getPublicUrl(fileName);
-
-//         if (urlError) {
-//             console.error('Get URL error:', urlError);
-//             throw urlError;
-//         }
-
-//         // Add image URL to form data
-//         data.image_url = publicURL;
-
-//         // Insert form data into Supabase database
-//         const { data: insertedData, error } = await supabase
-//             .from('forestry_dockets') // Replace with your actual table name
-//             .insert([data]);
-
-//         if (error) {
-//             console.error('Insert error:', error);
-//             throw error;
-//         }
-
-//         alert('Form submitted successfully!');
-//         console.log('Inserted data:', insertedData);
-
-//         // Optionally reset form and UI
-//         video.style.display = 'block';
-//         canvas.style.display = 'none';
-//         canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-//         logImageInput.dataset.blob = ''; // Clear the hidden input
-//     } catch (error) {
-//         console.error('Error:', error);
-//         alert('Error submitting form. Please try again.');
-//     }
-// });

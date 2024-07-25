@@ -1,3 +1,5 @@
+to active virtual ".\webVenv\Scripts\activate"
+
 To use the ComputerVision.py ensure both it and the imports.py file are in the directory required
 
 Then import it using the following:

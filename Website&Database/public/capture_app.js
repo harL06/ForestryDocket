@@ -19,18 +19,23 @@ const nextButton = document.getElementById('nextButton');
 const canvas = document.getElementById('canvas');
 const imageLink = document.getElementById('imageLink');
 
-// Set up video stream with back camera
-navigator.mediaDevices.enumerateDevices()
-  .then(devices => {
-    const videoDevices = devices.filter(device => device.kind === 'videoinput');
-    const rearCamera = videoDevices.find(device => device.label.toLowerCase().includes('back') || device.label.toLowerCase().includes('rear'));
+// Function to get the back camera
+async function getBackCamera() {
+  const devices = await navigator.mediaDevices.enumerateDevices();
+  const videoDevices = devices.filter(device => device.kind === 'videoinput');
+  return videoDevices[videoDevices.length - 1];
+}
 
+// Set up video stream with back camera
+getBackCamera()
+  .then(camera => {
     return navigator.mediaDevices.getUserMedia({
-      video: { deviceId: rearCamera ? rearCamera.deviceId : undefined }
+      video: { deviceId: camera.deviceId }
     });
   })
   .then(stream => {
     videoElement.srcObject = stream;
+    videoElement.play(); // Ensure the video plays
   })
   .catch(err => {
     console.error('Error accessing camera:', err);

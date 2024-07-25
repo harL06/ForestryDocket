@@ -13,6 +13,10 @@ const docketForm = document.getElementById('docketForm');
 docketForm.addEventListener('submit', async (event) => {
 event.preventDefault();
 
+const uploadedImageUrl = localStorage.getItem('uploadedImageUrl');
+if (uploadedImageUrl) {
+    console.log('Retrieved Image URL:', uploadedImageUrl);
+}
   // Collect form data
 const formData = new FormData(docketForm);
 const data = {
@@ -29,7 +33,7 @@ const data = {
     weight_ticket_number: formData.get('weight_ticket_number'),
     net_weight: formData.get('net_weight'),
     driver_signature: formData.get('driver_signature'),
-    image_url: localStorage.getItem('capturedImageUrl') // Retrieve the stored image URL
+    image_url: uploadedImageUrl // Retrieve the stored image URL
 };
 
 try {
@@ -37,7 +41,7 @@ try {
     const { data: insertData, error } = await supabase
     .from('forestry_dockets')
     .insert([data]);
-    window.location.href = 'confirm_submit.html'; // Redirect to submission confirm
+    //window.location.href = 'confirm_submit.html'; // Redirect to submission confirm
 
     if (error) throw error;
 

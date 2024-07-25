@@ -48,8 +48,22 @@ def readLicensePlate(truckImage):
             headers={'Authorization': 'Token 788a89d0e0463e0593cc1690cf890990969c2695'})  # Authorization token
 
     plateJson = response.json()  # Parse the JSON response
-    truckPlate = plateJson['results'][0]['plate']  # Extract the detected license plate
-    return truckPlate  # Return the license plate
+    results = plateJson.get('results', [])
+    if results:
+        # Check if the first result has the 'plate' key
+        plate = results[0].get('plate')
+        if plate:
+            print(f"Detected license plate: {plate}")
+            truckPlate = plate
+            return truckPlate
+        else:
+            print("No plate information available in the first result.")
+            return "ERROR NO PLATE FOUND"
+    else:
+        print("No results found in the API response.")
+        truckPlate = "ERROR"
+        return "ERROR NO RESULTS FOUND"
+
 
 ''' Function to analyze an image by counting logs and reading the license plate '''
 def analyseImage(dataBaseImageURL):

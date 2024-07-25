@@ -42,6 +42,17 @@ try {
     if (error) throw error;
 
     console.log('Docket submitted successfully:', insertData);
+
+    const { exec } = require('child_process');
+
+    exec('public\Python\Supabase.py', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
+    });
     // Redirect or show a success message to the user
 } catch (error) {
     console.error('Error submitting docket form:', error.message);

@@ -72,16 +72,6 @@ uploadButton.addEventListener('click', async (event) => {
       nextButton.hidden = false;  // Show the button
       nextButton.disabled = false; // Enable the button
 
-      const { exec } = require('child_process');
-
-      exec('public\Python\Supabase.py', (error, stdout, stderr) => {
-          if (error) {
-              console.error(`exec error: ${error}`);
-              return;
-          }
-          console.log(`stdout: ${stdout}`);
-          console.error(`stderr: ${stderr}`);
-      });
     } else {
       imageLink.textContent = 'Error uploading the image.';
     }

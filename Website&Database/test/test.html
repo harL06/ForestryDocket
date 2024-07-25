@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload</title>
+  <style>
+    #videoElement {
+      width: 100%;
+      max-width: 400px;
+    }
+    #canvas {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+    <h1>Capture Image</h1>
+    <video id="videoElement" autoplay></video>
+    <button id="captureButton">Capture</button>
+    <button id="resetButton" disabled>Reset</button>
+    <button id="uploadButton" disabled>Upload</button>
+    <canvas id="canvas"></canvas>
+    <p id="imageLink"></p>
+    <script type="module" src="upload_image_test.js"></script>
+</body>
+</html>

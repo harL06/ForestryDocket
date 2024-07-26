@@ -47,15 +47,15 @@ try {
 
     console.log('Docket submitted successfully: hh', insertData);
 
-    const response = await fetch('https://9e80-89-101-154-45.ngrok-free.app', {
-        method: 'GET'
-    });
+    // const response = await fetch('https://9e80-89-101-154-45.ngrok-free.app', {
+    //     method: 'GET'
+    // });
 
-    if (!response.ok) {
-        throw new Error('Network response was not ok');
-    }
+    // if (!response.ok) {
+    //     throw new Error('Network response was not ok');
+    // }
 
-    console.log('Python script executed successfully');
+    // console.log('Python script executed successfully');
 
     // Redirect or show a success message to the user
 } catch (error) {

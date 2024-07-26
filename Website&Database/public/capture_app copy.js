@@ -17,7 +17,10 @@ const imageLink = document.getElementById('imageLink');
 // Function to upload an image
 async function uploadImage(file) {
   const bucketName = 'image_logs';
-  const filePath = `${file.name}`;
+
+  // Generate a unique filename using the current date and time
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+  const filePath = `image_${timestamp}.png`;
 
   try {
     const { data, error } = await supabase
@@ -65,7 +68,7 @@ uploadButton.addEventListener('click', async (event) => {
         throw error;
       }
 
-      imageLink.textContent = `Image URL: ${publicUrl}`;
+      imageLink.textContent = `Image URL: q ${publicUrl}`;
       imageLink.href = publicUrl;
       localStorage.setItem('uploadedImageUrl', publicUrl);
 

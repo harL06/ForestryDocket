@@ -47,7 +47,7 @@ try {
 
     console.log('Docket submitted successfully:', insertData);
 
-    const response = await fetch('http://127.0.0.1:5000/run-python-script', {
+    const response = await fetch('https://9e80-89-101-154-45.ngrok-free.app', {
         method: 'GET'
     });
 

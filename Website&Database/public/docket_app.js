@@ -47,22 +47,16 @@ try {
 
     console.log('Docket submitted successfully:', insertData);
 
-    const { exec } = require('child_process');
-    const path = require('path');
-    
-    // Use path module to ensure cross-platform compatibility
-    const scriptPath = path.join(__dirname, 'public', 'Python', 'Supabase.py');
-    
-    // Execute the Python script using 'python3'
-    exec(`python3 ${scriptPath}`, (error, stdout, stderr) => {
-        if (error) {
-            console.error(`exec error: ${error}`);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
+    const response = await fetch('http://127.0.0.1:5000/run-python-script', {
+        method: 'GET'
     });
-    
+
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+
+    console.log('Python script executed successfully');
+
     // Redirect or show a success message to the user
 } catch (error) {
     console.error('Error submitting docket form:', error.message);

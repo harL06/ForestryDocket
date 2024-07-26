@@ -1,0 +1,6 @@
+go to nav bar. type cmd
+
+then type
+python file.py
+
+to end Ctrl + c

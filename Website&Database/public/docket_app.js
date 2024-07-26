@@ -45,7 +45,7 @@ try {
 
     if (error) throw error;
 
-    console.log('Docket submitted successfully:', insertData);
+    console.log('Docket submitted successfully: hh', insertData);
 
     const response = await fetch('https://9e80-89-101-154-45.ngrok-free.app', {
         method: 'GET'

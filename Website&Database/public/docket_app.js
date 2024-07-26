@@ -41,7 +41,7 @@ try {
     const { data: insertData, error } = await supabase
     .from('forestry_dockets')
     .insert([data]);
-    //window.location.href = 'confirm_submit.html'; // Redirect to submission confirm
+    window.location.href = 'confirm_submit.html'; // Redirect to submission confirm
 
     if (error) throw error;
 

@@ -9,13 +9,19 @@ class analysedImage:
 
 ''' Function to download an image from a given URL and save it locally '''
 def getImage(imageURL, fileName):
-    response = imports.requests.get(imageURL)  # Send a GET request to the image URL
-    if response.status_code == 200:  # Check if the request was successful
-        with open(fileName, 'wb') as file:  # Open a file in write-binary mode
-            file.write(response.content)  # Write the image content to the file
-        print("Image downloaded successfully.")  # Print success message
+    if imageURL: # Checking if database provided an image URL
+        response = imports.requests.get(imageURL)  # Send a GET request to the image URL
+        if response.status_code == 200:  # Check if the request was successful
+            with open(fileName, 'wb') as file:  # Open a file in write-binary mode
+                file.write(response.content)  # Write the image content to the file
+            print("Image downloaded successfully.")  # Print success message
+            return True
+        else:
+            print(f"Failed to download image. Status code: {response.status_code}")  # Print error message if download fails
+            return False
     else:
-        print(f"Failed to download image. Status code: {response.status_code}")  # Print error message if download fails
+        print("ERROR: Image URL is blank")
+        return False
 
 ''' Function to delete the downloaded image file '''
 def cleanUp(fileName):
@@ -52,7 +58,7 @@ def readLicensePlate(truckImage):
     if results:
         # Check if the first result has the 'plate' key
         plate = results[0].get('plate')
-        if plate:
+        if plate: # Check to ensure a license plate was found
             print(f"Detected license plate: {plate}")
             truckPlate = plate
             return truckPlate
@@ -61,18 +67,20 @@ def readLicensePlate(truckImage):
             return "ERROR NO PLATE FOUND"
     else:
         print("No results found in the API response.")
-        truckPlate = "ERROR"
         return "ERROR NO RESULTS FOUND"
 
 
 ''' Function to analyze an image by counting logs and reading the license plate '''
 def analyseImage(dataBaseImageURL):
     imageName = 'tempImage.jpg'  # Temporary file name for the downloaded image
-    getImage(dataBaseImageURL, imageName)  # Download the image
-    logNumber = countLogs(imageName)  # Count logs in the image
-    truckLicensePlate = readLicensePlate(imageName)  # Read the license plate from the image
-    cleanUp(imageName)  # Clean up the downloaded image file
-    return analysedImage(logNumber, truckLicensePlate)  # Return the analysis results as an analysedImage object
+    bImage = getImage(dataBaseImageURL, imageName)  # Download the image
+    if bImage: # Check for image successfully downloaded
+        logNumber = countLogs(imageName)  # Count logs in the image
+        truckLicensePlate = readLicensePlate(imageName)  # Read the license plate from the image
+        cleanUp(imageName)  # Clean up the downloaded image file
+        return analysedImage(logNumber, truckLicensePlate)  # Return the analysis results as an analysedImage object
+    else:
+        return analysedImage("-1", "NO IMAGE") # Ensures code will continue even if no image as dowloaded
 
 ''' Uncomment the lines below to test the analyseImage function '''
 # imageResults = analyseImage(imageURL)

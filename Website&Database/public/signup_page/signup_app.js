@@ -8,35 +8,31 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 //const { createClient } = supabase; // Ensure Supabase is available globally
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('login-form');
-    loginForm.addEventListener('submit', async (event) => {
+    const signupForm = document.getElementById('signup-form');
+    signupForm.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
         try {
-            const { data: sessionData, error: authError } = await supabase.auth.signInWithPassword({
+            const { data, error } = await supabase.auth.signUp({
                 email: email,
                 password: password,
             });
 
-            if (authError) {
-                document.getElementById('login-error').innerText = authError.message;
-                return;
+            if (error) {
+                document.getElementById('signup-error').innerText = error.message;
+            } else {
+                document.getElementById('signup-success').innerText = 'Sign-up successful! Please check your email for confirmation.';
+                // Optionally, redirect to another page or clear the form
+                signupForm.reset();
             }
-
-            // Successfully logged in, fetch additional user data if needed
-            const { user } = sessionData;
-
-
-
-            alert('Login successful!');
-            // Redirect user or handle post-login actions here
         } catch (error) {
-            console.error('Error during login:', error);
-            document.getElementById('login-error').innerText = 'An unexpected error occurred. Please try again.';
+            console.error('Error during sign-up:', error);
+            document.getElementById('signup-error').innerText = 'An unexpected error occurred. Please try again.';
         }
     });
 });

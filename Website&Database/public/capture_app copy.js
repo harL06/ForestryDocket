@@ -61,7 +61,7 @@ uploadButton.addEventListener('click', async (event) => {
 
 
     if (result) {
-      const { data: { publicURL }, error } = supabase
+      const { data: { publicUrl }, error } = supabase
         .storage
         .from('image_logs')
         .getPublicUrl(result.path);
@@ -72,9 +72,9 @@ uploadButton.addEventListener('click', async (event) => {
         return;
       }
 
-      imageLink.textContent = `Image URL: ${publicURL}`;
-      imageLink.href = publicURL;
-      localStorage.setItem('uploadedImageUrl', publicURL);
+      imageLink.textContent = `Image URL: ${publicUrl}`;
+      imageLink.href = publicUrl;
+      localStorage.setItem('uploadedImageUrl', publicUrl);
 
       nextButton.hidden = false;
       nextButton.disabled = false;

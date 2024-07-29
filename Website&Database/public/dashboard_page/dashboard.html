@@ -8,6 +8,14 @@
 </head>
 <body>
     <h1>Driver Activity Dashboard</h1>
+
+    <div id="link-section">
+        <h2>Shareable Link for Drivers</h2>
+        <p>Use the link below to allow drivers to submit dockets to your dashboard:</p>
+        <input type="text" id="shareableLink" readonly>
+        <button id="copyLink">Copy Link</button>
+    </div>
+
     <p id="loadingText" hidden>Loading Data...</p>
     <table id="activityTable">
         <thead>

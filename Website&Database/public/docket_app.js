@@ -7,6 +7,21 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 //const { createClient } = supabase; // Ensure Supabase is available globally
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+let managerId;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    managerId = urlParams.get('manager_id');
+
+    console.log("Manager ID:", managerId);
+
+    if (!managerId) {
+        document.getElementById('submit-error').innerText = 'Invalid submission link.';
+        return;
+    }
+
+    // Handle docket submission logic here, using the managerId
+});
 
 // Add event listener for form submission
 const docketForm = document.getElementById('docketForm');
@@ -19,7 +34,9 @@ if (uploadedImageUrl) {
 }
   // Collect form data
 const formData = new FormData(docketForm);
+console.log(managerId)
 const data = {
+    manager_id: managerId,
     permit_number: formData.get('permit_number'),
     forest_code: formData.get('forest_code'),
     vehicle_registration: formData.get('vehicle_registration'),
@@ -30,9 +47,6 @@ const data = {
     destination: formData.get('destination'),
     time_of_arrival: formData.get('time_of_arrival'),
     time_of_departure: formData.get('time_of_departure'),
-    weight_ticket_number: formData.get('weight_ticket_number'),
-    net_weight: formData.get('net_weight'),
-    driver_signature: formData.get('driver_signature'),
     image_url: uploadedImageUrl // Retrieve the stored image URL
 };
 
@@ -40,8 +54,8 @@ try {
     // Insert form data into Supabase
     const { data: insertData, error } = await supabase
     .from('forestry_dockets')
-    .insert([data]);
-    window.location.href = 'confirm_submit.html'; // Redirect to submission confirm
+    .insert([data]);    
+    //window.location.href = 'confirm_submit.html'; // Redirect to submission confirm
 
     if (error) throw error;
 

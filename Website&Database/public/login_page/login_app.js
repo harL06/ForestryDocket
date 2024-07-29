@@ -30,9 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
             // Successfully logged in, fetch additional user data if needed
             const { user } = sessionData;
 
+            if (user) {
+                // Successfully logged in
+                const managerId = user.id; // Get the unique manager ID from Supabase Auth
+                console.log('Manager ID:', managerId);
+
+                // Redirect to the manager's personalised dashboard
+                window.location.href = `../dashboard_page/dashboard.html?manager_id=${managerId}`;
+            }
 
 
-            alert('Login successful!');
+            //alert('Login successful!');
+
             // Redirect user or handle post-login actions here
         } catch (error) {
             console.error('Error during login:', error);

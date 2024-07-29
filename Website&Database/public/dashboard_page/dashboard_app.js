@@ -7,14 +7,34 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 //const { createClient } = supabase; // Ensure Supabase is available globally
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// Get the manager_id from the URL
+function getManagerId() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('manager_id');
+}
+
 const loadingText = document.getElementById('loadingText');
+const shareableLinkInput = document.getElementById('shareableLink');
+const copyLinkButton = document.getElementById('copyLink');
+
 
 // Fetch data from Supabase
 async function fetchData() {
+
+    const managerId = getManagerId();
+
+    if (!managerId) {
+        console.error('No manager ID found in the URL');
+        document.getElementById('loadingText').innerText = 'Error: No manager ID provided.';
+        return;
+    }
+
     loadingText.hidden = false;
     const { data, error } = await supabase
         .from('forestry_dockets')
-        .select('*');
+        .select('*')
+        .eq('manager_id', managerId); // Filter by manager_id
 
     if (error) {
         console.error('Error fetching data:', error);
@@ -22,12 +42,13 @@ async function fetchData() {
     }
 
     populateTable(data);
+    generateShareableLink(managerId);
 }
 
 // Populate the table with data
 function populateTable(data) {
     const tableBody = document.getElementById('activityTable').getElementsByTagName('tbody')[0];
-    
+
     data.forEach(row => {
         const tr = document.createElement('tr');
 
@@ -45,6 +66,20 @@ function populateTable(data) {
     });
     loadingText.hidden = true;
 }
+
+// Generate the shareable link
+function generateShareableLink(managerId) {
+    const baseUrl = 'http://127.0.0.1:5500/public/capture%20copy.html'; // Replace with the correct URL to the upload page
+    const shareableLink = `${baseUrl}?manager_id=${managerId}`;
+    shareableLinkInput.value = shareableLink;
+}
+
+// Copy the link to clipboard
+copyLinkButton.addEventListener('click', () => {
+    shareableLinkInput.select();
+    document.execCommand('copy');
+    alert('Link copied to clipboard!');
+});
 
 // Load data when the page is loaded
 document.addEventListener('DOMContentLoaded', fetchData);

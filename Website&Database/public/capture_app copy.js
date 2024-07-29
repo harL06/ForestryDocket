@@ -7,6 +7,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 //const { createClient } = supabase; // Ensure Supabase is available globally
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+console.log(supabase)
 
 // Get elements
 const fileInput = document.getElementById('fileInput');
@@ -17,18 +18,18 @@ const imageLink = document.getElementById('imageLink');
 // Function to upload an image
 async function uploadImage(file) {
   const bucketName = 'image_logs';
-
-  // Generate a unique filename using the current date and time
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
   const filePath = `image_${timestamp}.png`;
+  
 
   try {
+    
     const { data, error } = await supabase
       .storage
       .from(bucketName)
       .upload(filePath, file);
-
     if (error) {
+      console.error('Upload error:', error);
       throw error;
     }
 
@@ -42,48 +43,52 @@ async function uploadImage(file) {
 
 // Event listener for file input change
 fileInput.addEventListener('change', () => {
-  if (fileInput.files.length > 0) {
-    uploadButton.disabled = false;
-  } else {
-    uploadButton.disabled = true;
-  }
+  uploadButton.disabled = fileInput.files.length === 0;
 });
 
 // Upload the selected image to Supabase
 uploadButton.addEventListener('click', async (event) => {
-  event.preventDefault(); // Prevent the form from submitting
+  event.preventDefault();
   uploadButton.disabled = true;
-
+  console.log("TEST");
   if (fileInput.files.length > 0) {
+    
     const file = fileInput.files[0];
-
+    console.log(file)
     const result = await uploadImage(file);
+    console.log("TEST2");
+    
+
+
     if (result) {
-      const { data: { publicUrl }, error } = supabase
+      const { data: { publicURL }, error } = supabase
         .storage
         .from('image_logs')
         .getPublicUrl(result.path);
 
       if (error) {
-        throw error;
+        console.error('Error fetching public URL:', error);
+        imageLink.textContent = 'Error fetching image URL.';
+        return;
       }
 
-      imageLink.textContent = `Image URL: q ${publicUrl}`;
-      imageLink.href = publicUrl;
-      localStorage.setItem('uploadedImageUrl', publicUrl);
+      imageLink.textContent = `Image URL: ${publicURL}`;
+      imageLink.href = publicURL;
+      localStorage.setItem('uploadedImageUrl', publicURL);
 
-      nextButton.hidden = false;  // Show the button
-      nextButton.disabled = false; // Enable the button
-
+      nextButton.hidden = false;
+      nextButton.disabled = false;
     } else {
       imageLink.textContent = 'Error uploading the image.';
     }
+  } else {
+    imageLink.textContent = 'No file selected.';
   }
 });
 
-// Navigate to next page on clicking the next button
+// Navigate to the next page on clicking the next button
 nextButton.addEventListener('click', (event) => {
   event.preventDefault();
-  window.location.href = 'docket_form.html'; // Redirect to docket_form.html
+  window.location.href = 'docket_form.html';
 });
 

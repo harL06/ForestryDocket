@@ -15,6 +15,14 @@ const uploadButton = document.getElementById('uploadButton');
 const nextButton = document.getElementById('nextButton');
 const imageLink = document.getElementById('imageLink');
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const managerId = urlParams.get('manager_id');
+  localStorage.setItem('manager_id', managerId); // Store manager_id in local storage for later use
+  console.log("Manager ID:", managerId);
+});
+
 // Function to upload an image
 async function uploadImage(file) {
   const bucketName = 'image_logs';
@@ -89,6 +97,11 @@ uploadButton.addEventListener('click', async (event) => {
 // Navigate to the next page on clicking the next button
 nextButton.addEventListener('click', (event) => {
   event.preventDefault();
-  window.location.href = 'docket_form.html';
+  const managerId = localStorage.getItem('manager_id');
+  if (managerId) {
+      window.location.href = `docket_form.html?manager_id=${managerId}`;
+  } else {
+      console.error('Manager ID not found.');
+  }
 });
 

@@ -69,7 +69,7 @@ function populateTable(data) {
 
 // Generate the shareable link
 function generateShareableLink(managerId) {
-    const baseUrl = 'http://127.0.0.1:5500/public/capture%20copy.html'; // Replace with the correct URL to the upload page
+    const baseUrl = 'https://www.logwatch.ie/capture%20copy.html'; // Replace with the correct URL to the upload page
     const shareableLink = `${baseUrl}?manager_id=${managerId}`;
     shareableLinkInput.value = shareableLink;
 }

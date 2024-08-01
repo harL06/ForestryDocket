@@ -1,3 +1,5 @@
+<!-- NEW -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Confirmation</title>
     <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your CSS file -->
-    <script type="module" src="confirm_app.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/umd/supabase.js"></script>
 </head>
 <body>
+    <script type="module" src="confirm_app.js" defer></script>
     <div class="container">
         <h1>Email Confirmation</h1>
-        <p id="message">Processing your email confirmation...</p>
+        <p id="message">Your email has been confirmed successfully! You can now log in.</p>
+        <p><button onclick="redirectToLogin()">Go to Login Page</button></p>
     </div>
-
+    <script>
+        function redirectToLogin() {
+            window.location.href = '../login_page/login.html';
+        }
+    </script>
 </body>
 </html>

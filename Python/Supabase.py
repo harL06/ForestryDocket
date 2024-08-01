@@ -38,6 +38,8 @@ def functionLol():
     else:
         print("No records to update.")
 
+#functionLol()
+
 start_time = time.time()
 
 
@@ -51,4 +53,5 @@ while True:
 
     # Sleep for a short while to prevent excessive CPU usage
     time.sleep(1)
+    
 

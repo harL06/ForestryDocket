@@ -20,60 +20,70 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    // Show or hide certification details based on checkbox
+    const certifiedPureCheckbox = document.getElementById('certified-pure');
+    const certificationDetailsDiv = document.getElementById('certification-details');
+    console.log(certifiedPureCheckbox)
+    certifiedPureCheckbox.addEventListener('change', () => {
+        console.log("Checkbox state changed");
+        if (certifiedPureCheckbox.checked) {
+            certificationDetailsDiv.style.display = 'block';
+        } else {
+            certificationDetailsDiv.style.display = 'none';
+        }
+    });
+
     // Handle docket submission logic here, using the managerId
 });
 
 // Add event listener for form submission
 const docketForm = document.getElementById('docketForm');
 docketForm.addEventListener('submit', async (event) => {
-event.preventDefault();
+    event.preventDefault();
 
-const uploadedImageUrl = localStorage.getItem('uploadedImageUrl');
-if (uploadedImageUrl) {
-    console.log('Retrieved Image URL:', uploadedImageUrl);
-}
-  // Collect form data
-const formData = new FormData(docketForm);
-console.log(managerId)
-const data = {
-    manager_id: managerId,
-    permit_number: formData.get('permit_number'),
-    forest_code: formData.get('forest_code'),
-    vehicle_registration: formData.get('vehicle_registration'),
-    driver_name: formData.get('driver_name'),
-    vehicle_type: formData.get('vehicle_type'),
-    product_type: formData.get('product_type'),
-    estimated_tonnage: formData.get('estimated_tonnage'),
-    destination: formData.get('destination'),
-    time_of_arrival: formData.get('time_of_arrival'),
-    time_of_departure: formData.get('time_of_departure'),
-    image_url: uploadedImageUrl // Retrieve the stored image URL
-};
+    const uploadedImageUrl = localStorage.getItem('uploadedImageUrl');
+    if (uploadedImageUrl) {
+        console.log('Retrieved Image URL:', uploadedImageUrl);
+    }
 
-try {
-    // Insert form data into Supabase
-    const { data: insertData, error } = await supabase
-    .from('forestry_dockets')
-    .insert([data]);    
-    window.location.href = 'confirm_submit.html'; // Redirect to submission confirm
+    // Collect form data
+    const formData = new FormData(docketForm);
+    console.log(managerId);
 
-    if (error) throw error;
+    // Get the selected vehicle type
+    const vehicleType = formData.get('vehicle_type');
+    const productType = formData.get('product_type');
 
-    console.log('Docket submitted successfully: hh', insertData);
+    const data = {
+        manager_id: managerId,
+        permit_number: formData.get('permit_number'),
+        forest_code: formData.get('forest_code'),
+        vehicle_registration: formData.get('vehicle_registration'),
+        driver_name: formData.get('driver_name'),
+        vehicle_type: vehicleType,
+        product_type: productType,
+        estimated_tonnage: formData.get('estimated_tonnage'),
+        destination: formData.get('destination'),
+        time_of_arrival: formData.get('time_of_arrival'),
+        time_of_departure: formData.get('time_of_departure'),
+        certified_pure: formData.get('certified_pure') === 'on', // Convert checkbox to boolean
+        certification_info: formData.get('certification_info') || null,
+        image_url: uploadedImageUrl // Retrieve the stored image URL
+    };
 
-    // const response = await fetch('https://9e80-89-101-154-45.ngrok-free.app', {
-    //     method: 'GET'
-    // });
+    try {
+        // Insert form data into Supabase
+        const { data: insertData, error } = await supabase
+        .from('forestry_dockets')
+        .insert([data]);    
+        window.location.href = 'confirm_submit.html'; // Redirect to submission confirm
 
-    // if (!response.ok) {
-    //     throw new Error('Network response was not ok');
-    // }
+        if (error) throw error;
 
-    // console.log('Python script executed successfully');
+        console.log('Docket submitted successfully:', insertData);
 
-    // Redirect or show a success message to the user
-} catch (error) {
-    console.error('Error submitting docket form:', error.message);
-    // Show an error message to the user
-}
+    } catch (error) {
+        console.error('Error submitting docket form:', error.message);
+        // Show an error message to the user
+    }
 });

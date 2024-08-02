@@ -34,9 +34,17 @@
         </form>
         <div id="login-error"></div>
         <p>Don't have an account? <a href="../signup_page/signup.html">Sign up here</a></p>
+
+        <p><a href="#" id="forgot-password-link">Forgot your password?</a></p>
+
+        <div id="forgot-password-section" style="display: none;">
+            <h2>Reset Password</h2>
+            <form id="forgot-password-form">
+                <input type="email" id="reset-email" placeholder="Enter your email" required>
+                <button type="submit" id="reset_link">Send Reset Link</button>
+            </form>
+            <p id="reset-message"></p>
+        </div>
     </div>
-
-
-
 </body>
 </html>

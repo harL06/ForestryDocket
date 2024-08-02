@@ -47,3 +47,11 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+#reset-email {
+    padding-bottom: 10px; /* Adjust the padding as needed */
+}
+
+#reset_link {
+    margin-top: 15px;
+}

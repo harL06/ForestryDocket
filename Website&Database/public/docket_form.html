@@ -17,37 +17,47 @@
 </head>
 <body>
     <form id="docketForm">
+        
         <div class="form-section">
-            <h2>Section B: Docket</h2>
-            <label for="permit-number">Permit Number:</label>
+            <div id="language-container">
+                <p id="language-label">Language:</p>
+                <select id="language-selector">
+                    <option value="en">English</option>
+                    <option value="pl">Polski</option>
+                    <!-- Add more languages as needed -->
+                </select>
+            </div>
+            <div class="spacer"></div>
+            <h2 id="section-title">Section B: Docket</h2>
+            <label for="permit-number" id="permit-number-label">Permit Number:</label>
             <input type="text" id="permit-number" name="permit_number" required>
     
-            <label for="forest-code">Forest Code:</label>
+            <label for="forest-code" id="forest-code-label">Forest Code:</label>
             <input type="text" id="forest-code" name="forest_code">
     
-            <label for="vehicle-registration">Vehicle Registration Number:</label>
+            <label for="vehicle-registration" id="vehicle-registration-label">Vehicle Registration Number:</label>
             <input type="text" id="vehicle-registration" name="vehicle_registration" required>
     
-            <label for="driver-name">Driver's Name & Haulage Company:</label>
+            <label for="driver-name" id="driver-name-label">Driver's Name & Haulage Company:</label>
             <input type="text" id="driver-name" name="driver_name" required>
     
             <div class="spacer"></div>
 
-            <label for="vehicle-type">Vehicle Type:</label>
-            <div class="radio-group">
-                <label>
-                    8 wheel
-                    <input type="radio" name="vehicle_type" value="8 wheel">
-                </label>
-                <label>
-                    8 wheel + trailer
-                    <input type="radio" name="vehicle_type" value="8 wheel + trailer">
-                </label>
-                <label>
+            <label for="vehicle-type" id="vehicle-type-label">Vehicle Type:</label>
+                <div class="radio-group">
+                    <label id="8-wheel-label">
+                        8 wheel
+                        <input type="radio" name="vehicle_type" value="8 wheel">
+                    </label>
+                    <label id="8-wheel-trailer-label">
+                        8 wheel + trailer
+                        <input type="radio" name="vehicle_type" value="8 wheel + trailer">
+                    </label>
+                <label id="articulated-label">
                     Articulated
                     <input type="radio" name="vehicle_type" value="Articulated">
                 </label>
-                <label>
+                <label id="other-label">
                     Other
                     <input type="radio" name="vehicle_type" value="Other">
                 </label>
@@ -55,25 +65,25 @@
 
             <hr>
 
-            <label for="product_type">Product Type:</label>
+            <label for="product_type" id="product-type-label">Product Type:</label>
             <div class="radio-group">
-                <label>
+                <label id="sawlog-label">
                     Sawlog
                     <input type="radio" name="product_type" value="Sawlog">
                 </label>
-                <label>
+                <label id="pallet-label">
                     Pallet
                     <input type="radio" name="product_type" value="Pallet">
                 </label>
-                <label>
+                <label id="stake-label">
                     Stake
                     <input type="radio" name="product_type" value="Stake">
                 </label>
-                <label>
+                <label id="pulp-label">
                     Pulp
                     <input type="radio" name="product_type" value="Pulp">
                 </label>
-                <label>
+                <label id="other-label-2">
                     Other
                     <input type="radio" name="product_type" value="Other">
                 </label>
@@ -83,34 +93,34 @@
 
             <!-- <input type="text" id="product-type" name="product_type"> -->
     
-            <label for="estimated-tonnage">Estimated Tonnage (Tonnes):</label>
+            <label for="estimated-tonnage" id="estimated-tonnage-label">Estimated Tonnage (Tonnes):</label>
             <input type="number" id="estimated-tonnage" name="estimated_tonnage">
     
-            <label for="destination">Destination:</label>
+            <label for="destination" id="destination-label">Destination:</label>
             <input type="text" id="destination" name="destination">
     
-            <label for="time-of-arrival">Time of Arrival:</label>
+            <label for="time-of-arrival" id="time-of-arrival-label">Time of Arrival:</label>
             <input type="datetime-local" id="time-of-arrival" name="time_of_arrival">
     
-            <label for="time-of-departure">Time of Departure:</label>
+            <label for="time-of-departure" id="time-of-departure-label">Time of Departure:</label>
             <input type="datetime-local" id="time-of-departure" name="time_of_departure">
             <div class="spacer"></div>
 
             <div class="spacer"></div>
             <hr>
 
-            <label for="certified-pure">Certified Pure? (FM CoC):</label>
+            <label for="certified-pure" id="certified-pure-label">Certified Pure? (FM CoC):</label>
             <input type="checkbox" id="certified-pure" name="certified_pure">
 
             <div id="certification-details" style="display: none;">
-                <label for="certification-info">Forest Certification Chain of Custody Information:</label>
+                <label for="certification-info" id="certification-info-label">Forest Certification Chain of Custody Information:</label>
                 <input type="text" id="certification-info" name="certification_info">
             </div>
 
             <div class="spacer"></div>
             <div class="spacer"></div>
     
-            <button type="submit">Submit</button>
+            <button type="submit" id="submit-button">Submit</button>
         </div>
         <script type="module" src="docket_app.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/umd/supabase.js"></script>

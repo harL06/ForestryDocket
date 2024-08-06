@@ -114,3 +114,21 @@ button:disabled:hover {
 .spacer {
     height: 15px; /* Adjust this value to control the space */
 }
+
+/* Flexbox container for the language selector */
+#language-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjusts the space between the label and dropdown */
+}
+
+/* Optional: additional styling for the label and select */
+#language-label {
+    margin: 0;
+    font-weight: regular; /* Example of additional styling */
+}
+
+#language-selector {
+    padding: 5px;
+    font-size: 16px;
+}

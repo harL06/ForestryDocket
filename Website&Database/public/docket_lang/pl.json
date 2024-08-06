@@ -1,0 +1,27 @@
+{
+    "section_title": "Sekcja B: Akta",
+    "permit_number": "Numer Pozwolenia:",
+    "forest_code": "Kod Leśny:",
+    "vehicle_registration": "Numer Rejestracyjny Pojazdu:",
+    "driver_name": "Imię i Nazwisko Kierowcy Oraz Firma Transportowa:",
+
+    "vehicle_type": "Typ Pojazdu:",
+    "eight_wheel_label": "8 kół",
+    "eight_wheel_trailer_label": "8 kół + przyczepa",
+    "articulated_label": "Przegubowe",
+    "other_label": "Inny",
+
+    "product_type": "Rodzaj Produktu:",
+    "sawlog_label": "Kłoda Tartaczna",
+    "pallet_label": "Paleta",
+    "stake_label": "Stawka",
+    "pulp_label": "Miazga Drzewna",
+
+    "estimated_tonnage": "Szacunkowy Tonaż (Tony):",
+    "destination": "Miejsce Docelowe:",
+    "time_of_arrival": "Czas Przyjazdu:",
+    "time_of_departure": "Czas Odlotu:",
+    "certified_pure": "Certyfikowany Czysty? (FM CoC):",
+    "certification_info": "Forest Certification Chain of Custody Informacja:",
+    "submit": "Składać"
+}

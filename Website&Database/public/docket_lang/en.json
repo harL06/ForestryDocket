@@ -1,0 +1,22 @@
+{
+    "section_title": "Section B: Docket",
+    "permit_number": "Permit Number:",
+    "forest_code": "Forest Code:",
+    "vehicle_registration": "Vehicle Registration Number:",
+    "driver_name": "Driver's Name & Haulage Company:",
+
+    "vehicle_type": "Vehicle Type:",
+    "eight_wheel_label": "8 wheel",
+    "eight_wheel_trailer_label": "8 wheel + trailer",
+    "articulated_label": "Articulated",
+    "other_label": "Other",
+
+    "product_type": "Product Type:",
+    "estimated_tonnage": "Estimated Tonnage (Tonnes):",
+    "destination": "Destination:",
+    "time_of_arrival": "Time of Arrival:",
+    "time_of_departure": "Time of Departure:",
+    "certified_pure": "Certified Pure? (FM CoC):",
+    "certification_info": "Forest Certification Chain of Custody Information:",
+    "submit": "Submit"
+}

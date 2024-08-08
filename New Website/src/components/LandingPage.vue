@@ -6,8 +6,8 @@
                 <!-- <li class="cursor-pointer">Features</li>
                 <li class="cursor-pointer">Pricing</li>
                 <li class="cursor-pointer">Contact</li> -->
-                <router-link class="bg-custom-red text-white rounded-md px-7 py-3 uppercase" to="/login">Login</router-link>
-                <router-link class="bg-custom-red text-white rounded-md px-7 py-3 uppercase" to="/signup">Sign Up</router-link>
+                <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase" to="/login">Login</router-link>
+                <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase" to="/signup">Sign Up</router-link>
             </ul>
             <div class="flex sm:hidden flex-1 justify-end" @click="toggleMenu">
                     <span class="material-icons cursor-pointer">menu</span>
@@ -18,8 +18,8 @@
                     <span class="material-icons">close</span>
                 </button>
                 <div class="flex flex-col space-y-4">
-                    <router-link class="bg-custom-red text-white rounded-md px-7 py-3 uppercase text-center" to="/login" @click="toggleMenu">Login</router-link>
-                    <router-link class="bg-custom-red text-white rounded-md px-7 py-3 uppercase text-center" to="/signup" @click="toggleMenu">Sign Up</router-link>
+                    <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase text-center" to="/login" @click="toggleMenu">Login</router-link>
+                    <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase text-center" to="/signup" @click="toggleMenu">Sign Up</router-link>
                   </div>
                 </div>
             </div>
@@ -30,15 +30,14 @@
         <div class="container max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28 px-4">
             <!-- Content -->
             <div class="flex flex-1 flex-col items-center lg:items-start">
-                <h2 class="text-custom-blue text-3xl md:text-4xl lg:text-5xl text-center lg:text-left mb-6">
-                    A Simple Bookmark Manager
+                <h2 class="text-custom-black text-3xl md:text-4xl lg:text-5xl text-center lg:text-left mb-6">
+                    Transforming Forestry Logistics
                 </h2>
                 <p class="text-custom-grey text-lg text-center lg:text-left mb-6">
-                    A clean and simple interface to organise your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free
+                    A simple alternative to the paper docket system. We aim to tackle theft in forestry by using real-time updates and added security
                 </p>
                 <div class="flex justify-center flex-wrap gap-6">
-                    <button type="button" class="btn btn-purple hover:bg-custom-white hover:text-black">Get it on Chrome</button>
-                    <button type="button" class="btn btn-white hover:bg-custom-purple hover:text-white">Get it on Firefox</button>
+                    <button type="button" class="btn btn-bold-green font-weight:bold">Try it Now</button>
                 </div>
             </div>
 
@@ -47,7 +46,7 @@
                 <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="../assets/hero-bg.png" alt="" />
             </div>
         </div>
-        <div class="hidden md:block overflow-hidden bg-custom-purple rounded-l-full absolute h-80 w-2/4 top-32 right-0 lg:-bottom-28 lg:-right-36"></div>
+        
     </section>
     <!-- Features -->
     <section class="bg-custom-white py-20 mt-20 lg:mt-60 overflow-hidden">

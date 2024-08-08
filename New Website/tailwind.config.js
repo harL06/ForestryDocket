@@ -9,13 +9,16 @@ export default {
       colors: {
         "custom-purple": "#5267DF",
         "custom-red": "#FA5959",
-        "custom-blue": "#242A45",
+        "custom-blue": "#5267DF",
         "custom-grey": "#9194A2",
         "custom-white": "#F7F7F7",
+        "custom-green": "#6F8A5E",
+        "custom-black": "#1A1E1A",
+        "custom-lightgreen": "#839E71"
       }
     },
     fontFamily: {
-      Hanken: ["Hanken Grotesk, sans-serif"]
+      Urbanist: ["Urbanist, sans-serif"]
     },
     container: {
       center: true,

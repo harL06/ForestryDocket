@@ -29,7 +29,7 @@ import Sidebar from './components/Sidebar.vue'
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 
 </style>

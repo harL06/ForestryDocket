@@ -113,7 +113,7 @@ const sortAsc = ref(true);
 const selectAll = ref(false);
 const pollingInterval = ref(null);
 const selectedItem = ref(null); // State for the selected item
-const managerId = ref(null);
+let managerId = sessionStorage.getItem('user_uuid');
 const shareableLink = ref('');
 
 const isEqualArray = (a, b) => {
@@ -122,29 +122,31 @@ const isEqualArray = (a, b) => {
 };
 
 const fetchData = async () => {
-
-  /*
-  const managerId = getManagerId();
+  if (!managerId) {
+    managerId = localStorage.getItem('user_uuid');
+  }
 
   if (!managerId) {
         console.error('No manager ID found in the URL');
         return;
     }
-      */
+  
 
   loading.value = true;
 
   let data, error;
-
+    console.log(managerId);
   if (forestryCode.value) {
     ({ data, error } = await supabase
       .from('forestry_dockets')
       .select('*')
-      .eq('forest_code', forestryCode.value));
+      .eq('forest_code', forestryCode.value)
+      .eq('manager_id', managerId));
   } else {
     ({ data, error } = await supabase
       .from('forestry_dockets')
-      .select('*'));
+      .select('*')
+      .eq('manager_id', managerId));
   }
 
   if (error) {
@@ -254,20 +256,14 @@ onMounted(() => {
   console.log(forestryCode.value);
   fetchData();
   startPolling();
-  managerId.value = getManagerId();
-  if (managerId.value) {
-    shareableLink.value = `https://www.logwatch.ie/capture%20copy.html?manager_id=${managerId.value}`;
+  if (managerId) {
+    shareableLink.value = `https://www.logwatch.ie/capture%20copy.html?manager_id=${managerId}`;
   }
 });
 
 onUnmounted(() => {
   stopPolling();
 });
-
-function getManagerId() {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get('manager_id');
-}
 
 
 function copyLink() {

@@ -36,12 +36,12 @@
 
     <div class="flex"></div>
 
-    <!-- <div class="menu">
-      <router-link class="button" to="/settings">
-        <span class="material-icons">settings</span>
-        <span class="text">Settings</span>
+    <div class="menu">
+      <router-link class="button" to="/logout">
+        <span class="material-icons">logout</span>
+        <span class="text">Log Out</span>
       </router-link>
-    </div> -->
+    </div>
   </aside>
 </template>
 

@@ -9,6 +9,10 @@
         <div class="form-group">
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
+            <label>
+                <input v-model="rememberMe" type="checkbox" />
+                Remember Me
+              </label>
         </div>
         <button type="submit">Login</button>
         </form>
@@ -41,10 +45,19 @@ const resetMessage = ref(null);
 const loginForm = ref(null);
 const loginError = ref(null);
 const forgotPasswordLink = ref(null);
+const rememberMe = ref(false);
 
 const router = useRouter();
 
 onMounted(() => {
+    //localStorage.removeItem('user_uuid')
+    if (sessionStorage.getItem('user_uuid')){
+        router.push({ name: 'table' });
+    }
+    else if (localStorage.getItem('user_uuid')) {
+        router.push({ name: 'table' });
+    }
+
     forgotPasswordLink.value.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent the default anchor behavior
         if (forgotPasswordSection.value.style.display === 'none' || forgotPasswordSection.value.style.display === '') {
@@ -105,8 +118,16 @@ onMounted(() => {
             // Successfully logged in
                 const managerId = user.id; // Get the unique manager ID from Supabase Auth
                 console.log('Manager ID:', managerId);
-
-                router.push({ name: 'table', query: { manager_id: managerId } });
+                // On successful login
+                if (rememberMe.value){
+                    console.log('Remembered Me');
+                    localStorage.setItem('user_uuid', managerId);
+                }
+                else{
+                    sessionStorage.setItem('user_uuid', managerId);
+                }
+                //sessionStorage.removeItem('user_uuid');
+                router.push({ name: 'table' });
             }
         } catch (error) {
             console.error('Error during login:', error);

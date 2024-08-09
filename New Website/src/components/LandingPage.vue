@@ -1,7 +1,8 @@
 <template>
     <header>
         <nav class="container max-w-screen-xl mx-auto flex items-center py-4 mt-4 sm:mt-12 px-4">
-            <div class="py-1"><img src="../assets/logo-bookmark.svg" alt="" /></div>
+            <!-- <div class="py-1"><img src="../assets/logo-bookmark.svg" alt="" /></div> -->
+            <h1 class="text-2xl">LogWatch</h1>
             <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-custom-blue uppercase text-xs">
                 <!-- <li class="cursor-pointer">Features</li>
                 <li class="cursor-pointer">Pricing</li>
@@ -34,7 +35,7 @@
                     Transforming Forestry Logistics
                 </h2>
                 <p class="text-custom-grey text-lg text-center lg:text-left mb-6">
-                    A simple alternative to the paper docket system. We aim to tackle theft in forestry by using real-time updates and added security
+                    A simple alternative to the paper docket system. We aim to tackle theft in forestry by using real-time updates and added security measures.
                 </p>
                 <div class="flex justify-center flex-wrap gap-6">
                     <button type="button" class="btn btn-bold-green font-weight:bold">Try it Now</button>
@@ -52,11 +53,11 @@
     <section class="bg-custom-white py-20 mt-20 lg:mt-60 overflow-hidden">
         <!-- Heading -->
         <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
-            <h1 class="text-3xl text-center text-custom-blue">Features</h1>
-            <p class="text-center text-custom-grey mt-4">
+            <h1 class="text-4xl text-center text-custom-black">Features</h1>
+            <!-- <p class="text-center text-custom-grey mt-4">
                 Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between
                 your devices so you can access them on the go.
-            </p>
+            </p> -->
         </div>
         <!-- Feature #1 -->
         <div class="relative mt-20 lg:mt-24">
@@ -64,67 +65,73 @@
             <!-- Image -->
                 <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
                     <img
-                        class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
+                        class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-3/6 md:h-2/6"
                         src="../assets/illustration-features-tab-1.png"
                         alt=""
                     />
                 </div>
             <!-- Content -->
                 <div class="flex flex-1 flex-col items-center lg:items-start">
-                    <h1 class="text-3xl text-custom-blue">Bookmark in one click</h1>
+                    <h1 class="text-3xl text-custom-black">Digital Dockets</h1>
                     <p class="text-custom-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
-                        Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control
-                        over how you manage your favourite sites.
+                        Say goodbye to the old paper-based system. Our digital docket solution makes it easy for drivers to submit entries 
+                        on the go, while providing forest owners with instant access to data.
                     </p>
-                    <button type="button" class="btn btn-purple hover:bg-custom-white hover:text-black">More Info</button>
+                    <button type="button" class="btn btn-green">More Info</button>
                 </div>
             </div>
             <!-- Rounded Rectangle -->
-            <div class=" hidden lg:block overflow-hidden bg-custom-purple rounded-r-full absolute h-80 w-2/4 -bottom-24 -left-36"></div>
+            <!-- <div class=" hidden lg:block overflow-hidden bg-custom-purple rounded-r-full absolute h-80 w-2/4 -bottom-24 -left-36"></div> -->
         </div>
         <!-- Feature #2 -->
         <div class="relative mt-20 lg:mt-52">
-            <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24 px-4">
+            <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-24 px-4">
                 <!-- Image -->
-                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+                <div class="flex flex-1 justify-centre ml-0 mr-0 z-10 mb-100 lg:mb-0">
                     <img
-                        class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
+                        class="mr-0 ml-100 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-6/6 md:h-full"
                         src="../assets/illustration-features-tab-2.png"
                         alt=""
                     />
                 </div>
                 <!-- Content -->
                 <div class="flex flex-1 flex-col items-center lg:items-start">
-                    <h1 class="text-3xl text-custom-blue">Intelligent search</h1>
+                    <h1 class="text-3xl text-custom-black">Enhanced Security</h1>
                     <p class="text-custom-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
-                        Our powerful search feature will help you find saved sites in no time at all. No need to crawl through all
-                        of your bookmarks.
+                        With integrated computer vision systems, we verify log counts and truck licence plates, 
+                        minimising the potential for human error and dishonesty.
+
                     </p>
-                    <button type="button" class="btn btn-purple hover:bg-custom-white hover:text-black">More Info</button>
+                    <button type="button" class="btn btn-green">More Info</button>
                 </div>
             </div>
             <!-- Rounded Rectangle -->
-            <div class="hidden lg:block overflow-hidden bg-custom-purple rounded-l-full absolute h-80 w-2/4 -bottom-24 -right-36"></div>
+            <!-- <div class="hidden lg:block overflow-hidden bg-custom-purple rounded-l-full absolute h-80 w-2/4 -bottom-24 -right-36"></div> -->
         </div>
         <!-- Feature #3 -->
-        <div class="relative mt-20 lg:mt-52">
-            <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-x-24 px-4">
+        <div class="relative ml-0 mt-20 lg:mt-52">
+    <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-x-0 px-4">
             <!-- Image -->
-                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
-                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="../assets/illustration-features-tab-3.png" alt="" />
-                </div>
+            <div class="flex flex-1 justify-center z-10 mr-0 mb-10 lg:mb-0 relative lg:right-20">
+                <img
+                    class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:3/6 md:3/6 lg:w-6/6"
+                    src="../assets/illustration-features-tab-3.png"
+                    alt=""
+                />
+            </div>
+
             <!-- Content -->
                 <div class="flex flex-1 flex-col items-center lg:items-start">
-                    <h1 class="text-3xl text-custom-blue">Share your bookmarks</h1>
+                    <h1 class="text-3xl text-custom-black">Centralised Dashboard</h1>
                     <p class="text-custom-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
-                        Easily share your bookmarks and collections with others. Create a shareable link that you can send at the
-                        click of a button.
+                        Manage all your forestry logistics from one place. Our user-friendly dashboard lets you track, 
+                        filter, and search through all your entries without the hassle of paper.
                     </p>
-                    <button type="button" class="btn btn-purple hover:bg-custom-white hover:text-black">More Info</button>
+                    <button type="button" class="btn btn-green">More Info</button>
                 </div>
             </div>
             <!-- Rounded Rectangle -->
-            <div
+            <!-- <div
                     class="
                     hidden
                     lg:block
@@ -137,7 +144,7 @@
                     -bottom-24
                     -left-36
                     ">
-            </div>
+            </div> -->
         </div>
         </section>
 

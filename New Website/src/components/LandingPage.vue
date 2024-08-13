@@ -77,7 +77,7 @@
                         Say goodbye to the old paper-based system. Our digital docket solution makes it easy for drivers to submit entries 
                         on the go, while providing forest owners with instant access to data.
                     </p>
-                    <button type="button" class="btn btn-green">More Info</button>
+                    <router-link class="btn btn-bold-green font-weight:bold" to="/info">More Info</router-link>
                 </div>
             </div>
             <!-- Rounded Rectangle -->
@@ -102,7 +102,7 @@
                         minimising the potential for human error and dishonesty.
 
                     </p>
-                    <button type="button" class="btn btn-green">More Info</button>
+                    <router-link class="btn btn-bold-green font-weight:bold" to="/info">More Info</router-link>
                 </div>
             </div>
             <!-- Rounded Rectangle -->
@@ -127,7 +127,7 @@
                         Manage all your forestry logistics from one place. Our user-friendly dashboard lets you track, 
                         filter, and search through all your entries without the hassle of paper.
                     </p>
-                    <button type="button" class="btn btn-green">More Info</button>
+                    <router-link class="btn btn-bold-green font-weight:bold" to="/info">More Info</router-link>
                 </div>
             </div>
             <!-- Rounded Rectangle -->

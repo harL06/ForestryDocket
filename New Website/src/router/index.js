@@ -29,6 +29,10 @@ const routes = [
     component: () => import('../views/Logout.vue')
   },
   {
+    path: '/joined',
+    component: () => import('../views/Joined.vue')
+  },
+  {
     path: '/dashboard',
     component: () => import('../views/DashboardHome.vue'),
     meta: { requiresAuth: true },

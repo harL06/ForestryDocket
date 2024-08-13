@@ -283,20 +283,31 @@ const handleKeyDown = (event) => {
   }
 };
 
+const handleClickOutside = (event) => {
+  const modal = document.querySelector('.modal');
+  if (modal && !modal.contains(event.target)) {
+    closeModal();
+  }
+};
+
 
 // const addNew = () => {
 //   // Define the action for the + New button
 // };
 
 
-const viewMore = (item) => {
+const viewMore = async (item) => {
   selectedItem.value = item; // Set the selected item to display in the modal
   document.addEventListener('keydown', handleKeyDown); // Add keydown listener when modal opens
+  setTimeout(() => {
+    document.addEventListener('click', handleClickOutside); // Add click listener
+  }, 0);// Add click listener when modal opens
 };
 
 const closeModal = () => {
   selectedItem.value = null; // Clear the selected item to close the modal
   document.removeEventListener('keydown', handleKeyDown); // Remove keydown listener when modal closes
+  document.removeEventListener('click', handleClickOutside); // Remove click listener when modal closes
 };
 
 // Helper methods for status

@@ -44,7 +44,7 @@
 
             <!-- Image -->
             <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
-                <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="../assets/hero-bg.png" alt="" />
+                <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="../assets/hero-bg.webp" alt="" />
             </div>
         </div>
         
@@ -66,7 +66,7 @@
                 <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
                     <img
                         class="w-3/6 sm:w-80% lg:w-80%"
-                        src="../assets/illustration-features-tab-1.png"
+                        src="../assets/illustration-features-tab-1.webp"
                         alt=""
                     />
                 </div>
@@ -90,7 +90,7 @@
                 <div class="flex flex-1 justify-centre ml-10 mr-0 z-10 mb-10 lg:mb-0">
                     <img
                         class="mr-0 ml-200 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-6/6 md:h-full"
-                        src="../assets/illustration-features-tab-2.png"
+                        src="../assets/illustration-features-tab-2.webp"
                         alt=""
                     />
                 </div>
@@ -115,7 +115,7 @@
             <div class="flex flex-1 justify-center z-10 mr-0 mb-10 lg:mb-0 relative lg:right-20">
                 <img
                     class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:3/6 md:3/6 lg:w-6/6"
-                    src="../assets/illustration-features-tab-3.png"
+                    src="../assets/illustration-features-tab-3.webp"
                     alt=""
                 />
             </div>

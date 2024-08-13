@@ -32,6 +32,16 @@
                     <li class="mb-2"><span class="font-semi-bold text-custom-black">Step 2:</span> Submit the docket easily online instead of depositing it in a docket box tied to a tree!</li>
                     <li class="mb-2"><span class="font-semi-bold text-custom-black">Step 3:</span> The information then goes directly to the forester's personalised, real-time dashboard.</li>
                 </ul>
+                <br>
+                <br>
+                <!-- Credit to ITGA -->
+                <p class="text-sm text-custom-grey mt-6 text-center lg:text-left sm:w-3/4 lg:w-full">
+                    Our docket system is based on the standards set in the <a href="https://www.itga.ie/images/pdf/MTSSApril2010.pdf" class="text-custom-black underline">ITGA Manual Timber Sales System (MTSS)</a> by the Irish Timber Growers Association (ITGA).
+                </p>
+                <br>
+                <br>
+                <div style="position: relative; padding-bottom: calc(60% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/jrcHccSQHpvXd0wCZcCJ?embed&show_copy_link=true" title="Docket Submission
+                    " frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;"></iframe></div>
             </div>
         </div>
 
@@ -71,14 +81,22 @@
             <!-- Content -->
             <div class="flex flex-1 flex-col items-center lg:items-start">
                 <h1 class="text-3xl text-custom-black">Centralised Dashboard</h1>
+
                 <p class="text-xl text-custom-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
                     Our intuitive dashboard provides a seamless and user-friendly experience, giving you complete control over your forestry logistics. With just a few clicks, you can easily track, filter, and search through all your entries, ensuring that you have quick access to the information you need. It offers powerful tools for sorting and organising your entries, so you can focus on making informed decisions without the hassle of sifting through endless paperwork.
                 </p>
                 <h2 class="text-2xl text-custom-black mt-6">How it works</h2>
+
                 <ul class="list-none text-xl text-custom-grey mt-4">
                     <li class="mb-2"><span class="font-semi-bold text-custom-black">Step 1:</span> Forester receives entries from drivers into their personalised dashboard</li>
                     <li class="mb-2"><span class="font-semi-bold text-custom-black">Step 2:</span> Foresters can filter or search for specific entries</li>
                 </ul>
+                <br>
+                <br>
+                <!-- Arcade Dashboard Demo -->
+                <div style="position: relative; padding-bottom: calc(40% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/o1VgfJm9P38oWGWxnBVq?embed&show_copy_link=true" title="LogWatch" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;"></iframe></div>
+
+                <br>
             </div>
         </div>
 
@@ -113,5 +131,5 @@
 </script>
 
 <style scoped>
-@import '../style.css'
+@import '../style.css';
 </style>

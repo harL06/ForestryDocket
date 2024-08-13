@@ -2,7 +2,7 @@
     <header>
         <nav class="container max-w-screen-xl mx-auto flex items-center py-4 mt-4 sm:mt-12 px-4">
             <!-- <div class="py-1"><img src="../assets/logo-bookmark.svg" alt="" /></div> -->
-            <h1 class="text-3xl">LogWatch</h1>
+            <router-link class="text-3xl" to="/">LogWatch</router-link>
             <!-- <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-custom-blue uppercase text-xs"> -->
                 <!-- <li class="cursor-pointer">Features</li>
                 <li class="cursor-pointer">Pricing</li>

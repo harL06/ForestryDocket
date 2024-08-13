@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav class="container max-w-screen-xl mx-auto flex items-center py-4 mt-4 sm:mt-12 px-4">
-        <h1 class="text-3xl">LogWatch</h1>
+            <router-link class="text-3xl" to="/">LogWatch</router-link>
         </nav>
     </header>
     <section class="relative overflow-hidden">

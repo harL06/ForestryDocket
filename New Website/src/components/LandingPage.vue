@@ -257,7 +257,7 @@
     <footer class="bg-custom-green py-8">
         <div class="container max-w-screen-xl mx-auto flex flex-col md:flex-row items-center px-4">
             <div class="flex flex-1 flex-wrap items-center justify-center md:justify-middle gap-12">
-                <img src="../assets/logo-custom-white.png" alt="" />
+                <!-- <img src="../assets/logo-custom-white.png" alt="" /> -->
                 <ul class="flex text-white uppercase gap-12 text-xs">
                     <li class="cursor-arrow">LogWatch</li>
                     <!-- <li class="cursor-pointer">Pricing</li>

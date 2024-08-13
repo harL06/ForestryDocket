@@ -2,7 +2,7 @@
     <header>
         <nav class="container max-w-screen-xl mx-auto flex items-center py-4 mt-4 sm:mt-12 px-4">
             <!-- <div class="py-1"><img src="../assets/logo-bookmark.svg" alt="" /></div> -->
-            <h1 class="text-2xl">LogWatch</h1>
+            <h1 class="text-3xl">LogWatch</h1>
             <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-custom-blue uppercase text-xs">
                 <!-- <li class="cursor-pointer">Features</li>
                 <li class="cursor-pointer">Pricing</li>
@@ -65,7 +65,7 @@
             <!-- Image -->
                 <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
                     <img
-                        class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-3/6 md:h-2/6"
+                        class="w-3/6 sm:w-80% lg:w-80%"
                         src="../assets/illustration-features-tab-1.png"
                         alt=""
                     />
@@ -84,12 +84,12 @@
             <!-- <div class=" hidden lg:block overflow-hidden bg-custom-purple rounded-r-full absolute h-80 w-2/4 -bottom-24 -left-36"></div> -->
         </div>
         <!-- Feature #2 -->
-        <div class="relative mt-20 lg:mt-52">
-            <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-24 px-4">
+        <div class="relative mt-10 lg:mt-52">
+            <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-22 px-4">
                 <!-- Image -->
-                <div class="flex flex-1 justify-centre ml-0 mr-0 z-10 mb-100 lg:mb-0">
+                <div class="flex flex-1 justify-centre ml-10 mr-0 z-10 mb-10 lg:mb-0">
                     <img
-                        class="mr-0 ml-100 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-6/6 md:h-full"
+                        class="mr-0 ml-200 w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-6/6 md:h-full"
                         src="../assets/illustration-features-tab-2.png"
                         alt=""
                     />
@@ -98,7 +98,7 @@
                 <div class="flex flex-1 flex-col items-center lg:items-start">
                     <h1 class="text-3xl text-custom-black">Enhanced Security</h1>
                     <p class="text-custom-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
-                        With integrated computer vision systems, we verify log counts and truck licence plates, 
+                        With integrated computer vision systems, we verify log counts and truck licence plates,
                         minimising the potential for human error and dishonesty.
 
                     </p>
@@ -149,19 +149,19 @@
         </section>
 
         <!-- Download -->
-        <section class="py-20 mt-20">
+        <!-- <section class="py-20 mt-20"> -->
         <!-- Heading -->
-        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+        <!-- <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
             <h1 class="text-3xl text-center text-custom-blue">Download the extension</h1>
             <p class="text-center text-custom-grey mt-4">
                 We've got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to
                 prioritize.
             </p>
-        </div>
+        </div> -->
         <!-- Cards -->
-        <div class="container max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 px-4">
+        <!-- <div class="container max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 px-4"> -->
             <!-- Card 1 -->
-            <div class="flex flex-col rounded-md shadow-md lg:mb-16">
+            <!-- <div class="flex flex-col rounded-md shadow-md lg:mb-16">
                 <div class="p-6 flex flex-col items-center">
                     <img src="../assets/logo-chrome.svg" alt="" />
                     <h3 class="mt-5 mb-2 text-custom-blue text-lg">Add to Chrome</h3>
@@ -173,9 +173,9 @@
                         Add & Install Extension
                     </button>
                 </div>
-            </div>
+            </div> -->
             <!-- Card 2 -->
-            <div class="flex flex-col rounded-md shadow-md lg:my-8">
+            <!-- <div class="flex flex-col rounded-md shadow-md lg:my-8">
                 <div class="p-6 flex flex-col items-center">
                     <img src="../assets/logo-firefox.svg" alt="" />
                     <h3 class="mt-5 mb-2 text-custom-blue text-lg">Add to Firefox</h3>
@@ -187,9 +187,9 @@
                         Add & Install Extension
                     </button>
                 </div>
-            </div>
+            </div> -->
             <!-- Card 3 -->
-            <div class="flex flex-col rounded-md shadow-md lg:mt-16">
+            <!-- <div class="flex flex-col rounded-md shadow-md lg:mt-16">
                 <div class="p-6 flex flex-col items-center">
                     <img src="../assets/logo-opera.svg" alt="" />
                     <h3 class="mt-5 mb-2 text-custom-blue text-lg">Add to Opera</h3>
@@ -203,20 +203,20 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- FAQ -->
-    <section class="bg-custom-white py-20">
-        <div class="container max-w-screen-xl mx-auto px-4">
+    <!-- <section class="bg-custom-white py-20">
+        <div class="container max-w-screen-xl mx-auto px-4"> -->
             <!-- Heading -->
-            <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <!-- <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
                 <h1 class="text-3xl text-center text-custom-blue">Frequently Asked Questions</h1>
                 <p class="text-center text-custom-grey mt-4">
                     Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.
-                </p>
-            </div>
+                </p> -->
+            <!-- </div> -->
             <!-- FAQ Items -->
-            <div class="flex flex-col sm:w-3/4 lg:w-5/12 mt-12 mx-auto">
+            <!-- <div class="flex flex-col sm:w-3/4 lg:w-5/12 mt-12 mx-auto">
                 <div v-for="(faq, index) in faqs" :key="index" class="border-b">
                     <div class="flex items-center py-4 cursor-pointer" @click="toggleFaq(index)">
                         <span class="flex-1">{{ faq.question }}</span>
@@ -226,12 +226,12 @@
                         {{ faq.answer }}
                     </div>
                 </div>
-                <!-- <button type="button" class="mt-12 flex self-center btn btn-purple hover:bg-custom-white hover:text-black">
+                <button type="button" class="mt-12 flex self-center btn btn-purple hover:bg-custom-white hover:text-black">
                     More Info
-                </button> -->
+                </button>
                 </div>
             </div>
-    </section>
+    </section> -->
 
     <!-- Contact Us -->
     <!-- <section class="bg-custom-purple text-white py-20">
@@ -254,20 +254,20 @@
     </section> -->
 
     <!-- Footer -->
-    <footer class="bg-custom-blue py-8">
+    <footer class="bg-custom-green py-8">
         <div class="container max-w-screen-xl mx-auto flex flex-col md:flex-row items-center px-4">
-            <div class="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
+            <div class="flex flex-1 flex-wrap items-center justify-center md:justify-middle gap-12">
                 <img src="../assets/logo-custom-white.png" alt="" />
                 <ul class="flex text-white uppercase gap-12 text-xs">
-                    <li class="cursor-pointer">Features</li>
-                    <li class="cursor-pointer">Pricing</li>
-                    <li class="cursor-pointer">Contact</li>
+                    <li class="cursor-pointer">LogWatch</li>
+                    <!-- <li class="cursor-pointer">Pricing</li>
+                    <li class="cursor-pointer">Contact</li> -->
                 </ul>
         </div>
-        <div class="flex gap-10 mt-12 md:mt-0">
+        <!-- <div class="flex gap-10 mt-12 md:mt-0">
             <li><i class="text-white text-2xl fab fa-twitter"></i></li>
             <li><i class="text-white text-2xl fab fa-facebook-square"></i></li>
-        </div>
+        </div> -->
         </div>
     </footer>
 </template>

@@ -10,7 +10,7 @@ export default {
         "custom-purple": "#5267DF",
         "custom-red": "#FA5959",
         "custom-blue": "#5267DF",
-        "custom-grey": "#9194A2",
+        "custom-grey": "#626573",
         "custom-white": "#F7F7F7",
         "custom-green": "#6F8A5E",
         "custom-black": "#1A1E1A",

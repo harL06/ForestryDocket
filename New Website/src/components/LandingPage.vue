@@ -10,10 +10,10 @@
                 <!-- <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase" to="/login">Login</router-link>
                 <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase" to="/signup">Sign Up</router-link>
             </ul> -->
-            <!-- <div class="flex sm:hidden flex-1 justify-end" @click="toggleMenu">
+            <!-- <div= class="flex sm:hidden flex-1 justify-end" @click="toggleMenu">
                     <span class="material-icons cursor-pointer">menu</span>
-            </div>
-            <div v-if="isMenuOpen" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+            </div=
+                    <div v-if="isMenuOpen" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
                 <div class="bg-white w-3/4 max-w-sm p-8 rounded-lg relative">
                   <button @click="toggleMenu" class="absolute top-3 right-3 text-gray-600">
                     <span class="material-icons">close</span>

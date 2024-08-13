@@ -377,7 +377,7 @@ body {
 
 .shareable-link button {
   padding: 5px 10px;
-  background-color: #007bff;
+  background-color: #6f8a5e ;
   color: white;
   border: none;
   border-radius: 4px;
@@ -385,7 +385,7 @@ body {
 }
 
 .shareable-link button:hover {
-  background-color: #0056b3;
+  background-color: #839e71 ;
 }
 
 .controls {
@@ -409,7 +409,7 @@ body {
 .actions button, .controls .action-button {
   margin-right: 10px;
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #6f8a5e;
   color: white;
   border: none;
   border-radius: 4px;
@@ -417,7 +417,7 @@ body {
 }
 
 .actions button:hover, .controls .action-button:hover {
-  background-color: #0056b3;
+  background-color: #839e71;
 }
 
 .search-container {
@@ -472,15 +472,20 @@ table td {
 }
 
 .action-button {
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #6f8a5e;
+  border: none;
   color: white;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
+}
+
+.action-button:hover {
+  background-color: #839e71;
 }
 
 .small-button {
@@ -586,7 +591,7 @@ input[type="checkbox"] {
 }
 
 .view-image-button {
-  background-color: #007bff;
+  background-color: #6f8a5e;
   color: white;
   border: none;
   border-radius: 4px;
@@ -598,7 +603,7 @@ input[type="checkbox"] {
 }
 
 .view-image-button:hover {
-  background-color: #0056b3;
+  background-color: #839e71;
 }
 
 .modal-text p {

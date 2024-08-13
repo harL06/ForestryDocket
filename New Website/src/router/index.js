@@ -20,10 +20,10 @@ const routes = [
     path: '/login',
     component: () => import('../views/LoginPage.vue'),
   },
-  {
-    path: '/signup',
-    component: () => import('../views/SignupPage.vue'),
-  },
+  // {
+  //   path: '/signup',
+  //   component: () => import('../views/SignupPage.vue'),
+  // },
   {
     path: '/logout',
     component: () => import('../views/Logout.vue')
@@ -40,13 +40,9 @@ const routes = [
     meta: { requiresAuth: true },
   },
   {
-    path: '/about',
-    component: () => import('../views/About.vue'),
-  },
-  {
-    path: '/landing',
-    component: () => import('../views/Home.vue'),
-  },
+    path: '/join',
+    component: () => import('../views/List.vue')
+  }
 ];
 
 const router = createRouter({

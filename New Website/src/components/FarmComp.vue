@@ -57,7 +57,7 @@
   }
   
   .action-button {
-    background-color: #007bff;
+    background-color: #6f8a5e ;
     color: white;
     border: none;
     border-radius: 4px;
@@ -67,7 +67,7 @@
   }
   
   .action-button:hover {
-    background-color: #0056b3;
+    background-color: #839e71 ;
   }
   </style>
   

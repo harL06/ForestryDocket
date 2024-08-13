@@ -18,7 +18,7 @@
       </form>
       <div ref="loginError" id="login-error"></div>
       <br />
-      <p>
+      <!-- <p>
         Don't have an account? 
         <router-link to="/signup" class="signup-link">Sign Up here</router-link>
       </p>
@@ -33,7 +33,7 @@
           <button type="submit" id="reset_link" class="reset-button">Send Reset Link</button>
         </form>
         <p ref="resetMessage" id="reset-message"></p>
-      </div>
+      </div> -->
     </div>
   </template>
   
@@ -60,30 +60,30 @@
       router.push({ name: 'table' });
     }
   
-    forgotPasswordLink.value.addEventListener('click', (event) => {
-      event.preventDefault();
-      forgotPasswordSection.value.style.display = forgotPasswordSection.value.style.display === 'none' || forgotPasswordSection.value.style.display === '' ? 'block' : 'none';
-    });
+    // forgotPasswordLink.value.addEventListener('click', (event) => {
+    //   event.preventDefault();
+    //   forgotPasswordSection.value.style.display = forgotPasswordSection.value.style.display === 'none' || forgotPasswordSection.value.style.display === '' ? 'block' : 'none';
+    // });
   
-    forgotPasswordForm.value.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const email = resetEmailInput.value.value.trim();
-      if (!validateEmail(email)) {
-        resetMessage.value.textContent = 'Please enter a valid email address.';
-        return;
-      }
-      try {
-        const { error } = await supabase.auth.resetPasswordForEmail(email);
-        if (error) {
-          resetMessage.value.textContent = 'Error sending reset email: ' + error.message;
-        } else {
-          resetMessage.value.textContent = 'Check your email for a password reset link.';
-          forgotPasswordForm.value.reset();
-        }
-      } catch (err) {
-        resetMessage.value.textContent = 'Unexpected error occurred: ' + err.message;
-      }
-    });
+    // forgotPasswordForm.value.addEventListener('submit', async (event) => {
+    //   event.preventDefault();
+    //   const email = resetEmailInput.value.value.trim();
+    //   if (!validateEmail(email)) {
+    //     resetMessage.value.textContent = 'Please enter a valid email address.';
+    //     return;
+    //   }
+    //   try {
+    //     const { error } = await supabase.auth.resetPasswordForEmail(email);
+    //     if (error) {
+    //       resetMessage.value.textContent = 'Error sending reset email: ' + error.message;
+    //     } else {
+    //       resetMessage.value.textContent = 'Check your email for a password reset link.';
+    //       forgotPasswordForm.value.reset();
+    //     }
+    //   } catch (err) {
+    //     resetMessage.value.textContent = 'Unexpected error occurred: ' + err.message;
+    //   }
+    // });
   
     loginForm.value.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -114,10 +114,10 @@
     });
   });
   
-  function validateEmail(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-  }
+  // function validateEmail(email) {
+  //   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   return emailPattern.test(email);
+  // }
   </script>
   
   <style scoped>
@@ -175,7 +175,7 @@
   button {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
+    background-color: #6f8a5e;
     border: none;
     color: white;
     border-radius: 4px;
@@ -184,7 +184,7 @@
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #839e71;
   }
   
   .login-button {

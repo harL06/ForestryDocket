@@ -18,6 +18,7 @@
           <input v-model="inForestry" type="checkbox" id="dropDown"> Part of the forestry industry?
         </div>
         <div v-if="inForestry" id="occupation-details">
+          <div class="spacer"><br></div>
           <div class="form-group">
             <label for="occupation-selector">Occupation:</label>
             <select v-model="occupation" id="occupation-selector">

@@ -1,7 +1,7 @@
 <template>
   <aside :class="`${isExpanded && 'isExpanded'}`">
     <div class="logo">
-      <img src="../assets/vue.svg">
+      <img src="../assets/favicon.png">
     </div>
 
     <div class="menu-toggle-wrap">
@@ -75,7 +75,7 @@ aside {
   overflow: hidden;
   padding: 1rem;
 
-  background-color: var(--dark);
+  background-color: #1A1E1A;
   color: var(--light);
 
   transition: 0.2s ease-in-out;
@@ -113,7 +113,7 @@ aside {
 
       &:hover {
         .material-icons {
-          color: var(--primary);
+          color: #839e71;
           transform: translateX(0.35rem);
         }
       }
@@ -151,12 +151,12 @@ aside {
         background-color: var(--dark-alt);
 
         .material-icons, .text {
-          color: var(--primary);
+          color:#839e71;
         }
       }
 
       &.router-link-exact-active {
-        border-right: 5px solid var(--primary);
+        border-right: 5px solid #839e71;
       }
     }
   }

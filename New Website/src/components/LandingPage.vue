@@ -3,14 +3,14 @@
         <nav class="container max-w-screen-xl mx-auto flex items-center py-4 mt-4 sm:mt-12 px-4">
             <!-- <div class="py-1"><img src="../assets/logo-bookmark.svg" alt="" /></div> -->
             <h1 class="text-3xl">LogWatch</h1>
-            <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-custom-blue uppercase text-xs">
+            <!-- <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-custom-blue uppercase text-xs"> -->
                 <!-- <li class="cursor-pointer">Features</li>
                 <li class="cursor-pointer">Pricing</li>
                 <li class="cursor-pointer">Contact</li> -->
-                <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase" to="/login">Login</router-link>
+                <!-- <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase" to="/login">Login</router-link>
                 <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase" to="/signup">Sign Up</router-link>
-            </ul>
-            <div class="flex sm:hidden flex-1 justify-end" @click="toggleMenu">
+            </ul> -->
+            <!-- <div class="flex sm:hidden flex-1 justify-end" @click="toggleMenu">
                     <span class="material-icons cursor-pointer">menu</span>
             </div>
             <div v-if="isMenuOpen" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
@@ -22,8 +22,8 @@
                     <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase text-center" to="/login" @click="toggleMenu">Login</router-link>
                     <router-link class="btn btn-green text-white rounded-md px-7 py-3 uppercase text-center" to="/signup" @click="toggleMenu">Sign Up</router-link>
                   </div>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
         </nav>
     </header>
     <!-- Hero -->
@@ -38,7 +38,7 @@
                     A simple alternative to the paper docket system. We aim to tackle theft in forestry by using real-time updates and added security measures.
                 </p>
                 <div class="flex justify-center flex-wrap gap-6">
-                    <button type="button" class="btn btn-bold-green font-weight:bold">Try it Now</button>
+                    <router-link class="btn btn-bold-green font-weight:bold" to="/join">Join Waiting List</router-link>
                 </div>
             </div>
 
@@ -259,7 +259,7 @@
             <div class="flex flex-1 flex-wrap items-center justify-center md:justify-middle gap-12">
                 <img src="../assets/logo-custom-white.png" alt="" />
                 <ul class="flex text-white uppercase gap-12 text-xs">
-                    <li class="cursor-pointer">LogWatch</li>
+                    <li class="cursor-arrow">LogWatch</li>
                     <!-- <li class="cursor-pointer">Pricing</li>
                     <li class="cursor-pointer">Contact</li> -->
                 </ul>

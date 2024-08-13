@@ -148,7 +148,7 @@ aside {
       }
 
       &:hover, &.router-link-exact-active {
-        background-color: var(--dark-alt);
+        background-color: #192419;
 
         .material-icons, .text {
           color:#839e71;
@@ -177,7 +177,7 @@ aside {
     }
 
     h3 {
-      color: var(--grey);
+      color: #839e71;
       font-size: 0.875rem;
       margin-bottom: 0.5rem;
       text-transform: uppercase;

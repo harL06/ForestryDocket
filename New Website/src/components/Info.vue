@@ -18,8 +18,16 @@
 
     <section class="bg-custom-white py-20 mt-2 lg:mt-14 overflow-hidden">
         <!-- Feature #1 -->
+
         <div class="relative mt-0">
         <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-22 px-4">
+                <!-- Image -->
+                <div class="flex flex-1 justify-centre ml-0 mr-0 z-10 mb-0 lg:mb-0">
+                    <br>
+                <br>
+                <div style="position: relative; padding-bottom: calc(95% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/jrcHccSQHpvXd0wCZcCJ?embed&show_copy_link=true" title="Docket Submission
+                    " frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;"></iframe></div>
+                </div>
             <!-- Content -->
             <div class="flex flex-1 flex-col items-center lg:items-start">
                 <h1 class="text-3xl text-custom-black">Digital Dockets</h1>
@@ -38,10 +46,6 @@
                 <p class="text-sm text-custom-grey mt-6 text-center lg:text-left sm:w-3/4 lg:w-full">
                     Our docket system is based on the standards set in the <a href="https://www.itga.ie/images/pdf/MTSSApril2010.pdf" class="text-custom-black underline">ITGA Manual Timber Sales System (MTSS)</a> by the Irish Timber Growers Association (ITGA).
                 </p>
-                <br>
-                <br>
-                <div style="position: relative; padding-bottom: calc(60% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/jrcHccSQHpvXd0wCZcCJ?embed&show_copy_link=true" title="Docket Submission
-                    " frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;"></iframe></div>
             </div>
         </div>
 
@@ -78,6 +82,14 @@
         <!-- Feature #1 -->
         <div class="relative mt-0">
         <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-22 px-4">
+                <!-- Image -->
+                <div class="flex flex-1 justify-centre ml-10 mr-0 z-10 mb-0 lg:mb-0">
+                <br>
+                <br>
+                <!-- Arcade Dashboard Demo -->
+                <div style="position: relative; padding-bottom: calc(60% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/o1VgfJm9P38oWGWxnBVq?embed&show_copy_link=true" title="LogWatch" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;"></iframe></div>
+                </div>
+            
             <!-- Content -->
             <div class="flex flex-1 flex-col items-center lg:items-start">
                 <h1 class="text-3xl text-custom-black">Centralised Dashboard</h1>
@@ -93,8 +105,6 @@
                 </ul>
                 <br>
                 <br>
-                <!-- Arcade Dashboard Demo -->
-                <div style="position: relative; padding-bottom: calc(40% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/o1VgfJm9P38oWGWxnBVq?embed&show_copy_link=true" title="LogWatch" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;"></iframe></div>
 
                 <br>
             </div>
@@ -127,6 +137,9 @@
 </template>
 
 <script setup>
+import { reactive } from 'vue'
+import { ref } from 'vue'
+
 
 </script>
 

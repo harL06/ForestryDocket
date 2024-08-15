@@ -8,7 +8,7 @@
         <div class="container max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-1 mt-14 lg:mt-28 px-4">
             <!-- Content -->
             <div class="flex flex-1 flex-col items-center lg:items-start">
-                <h2 class="text-custom-black text-3xl md:text-4xl lg:text-5xl text-center lg:text-left mb-0 mt-10">
+                <h2 class="text-custom-black text-3xl md:text-4xl lg:text-5xl text-left lg:text-left mb-0 mt-10">
                     More Information:
                 </h2>
         </div>
@@ -25,13 +25,16 @@
                 <div class="flex flex-1 justify-centre ml-0 mr-0 z-10 mb-0 lg:mb-0">
                     <br>
                 <br>
-                <div style="position: relative; padding-bottom: calc(95% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/jrcHccSQHpvXd0wCZcCJ?embed&show_copy_link=true" title="Docket Submission
-                    " frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;"></iframe></div>
+                <div class="flex justify-center flex-01 mb-10 md:ml-20">
+                    <iframe src="https://demo.arcade.software/jrcHccSQHpvXd0wCZcCJ?embed&show_copy_link=true"
+                        title="Docket Submission" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen
+                        allowfullscreen allow="clipboard-write" style="width: 400px; height: 600px;"></iframe>
+                </div>
                 </div>
             <!-- Content -->
             <div class="flex flex-1 flex-col items-center lg:items-start">
                 <h1 class="text-3xl text-custom-black">Digital Dockets</h1>
-                <p class="text-xl text-custom-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
+                <p class="text-xl text-custom-grey my-4 text-left lg:text-left sm:text-m sm:w-3/4 lg:w-full">
                     Our system allows drivers to effortlessly complete and submit digital dockets directly from their smartphones. With just a few taps, drivers can quickly fill in all necessary details, ensuring that their dockets are accurate and up-to-date. This streamlined process eliminates the need for paper-based forms, reducing errors and saving valuable time. Power is finally restored to private forestry owners!
                 </p>
                 <h2 class="text-2xl text-custom-black mt-6">How it works</h2>
@@ -43,7 +46,7 @@
                 <br>
                 <br>
                 <!-- Credit to ITGA -->
-                <p class="text-sm text-custom-grey mt-6 text-center lg:text-left sm:w-3/4 lg:w-full">
+                <p class="text-sm text-custom-grey mt-6 text-left lg:text-left sm:w-3/4 lg:w-full">
                     Our docket system is based on the standards set in the <a href="https://www.itga.ie/images/pdf/MTSSApril2010.pdf" class="text-custom-black underline">ITGA Manual Timber Sales System (MTSS)</a> by the Irish Timber Growers Association (ITGA).
                 </p>
             </div>
@@ -61,7 +64,7 @@
             <!-- Content -->
             <div class="flex flex-1 flex-col items-center lg:items-start">
                 <h1 class="text-3xl text-custom-black">Enhanced Security</h1>
-                <p class="text-xl text-custom-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
+                <p class="text-xl text-custom-grey my-4 text-left lg:text-left sm:w-3/4 lg:w-full">
                     Using advanced computer vision systems, we verify log counts and truck licence plates with high accuracy. This technology reduces human error and prevents dishonesty, ensuring reliable data. Our system continuously monitors and cross-checks these details, improving transparency and accountability in the logging process.
 
                 </p>
@@ -83,18 +86,16 @@
         <div class="relative mt-0">
         <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-22 px-4">
                 <!-- Image -->
-                <div class="flex flex-1 justify-centre ml-10 mr-0 z-10 mb-0 lg:mb-0">
-                <br>
-                <br>
+                <div class="flex justify-center flex-01  mb-10 md:ml-20">
                 <!-- Arcade Dashboard Demo -->
-                <div style="position: relative; padding-bottom: calc(60% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/o1VgfJm9P38oWGWxnBVq?embed&show_copy_link=true" title="LogWatch" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;"></iframe></div>
-                </div>
+                <iframe src="https://demo.arcade.software/o1VgfJm9P38oWGWxnBVq?embed&show_copy_link=true" title="LogWatch" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen
+                        allowfullscreen allow="clipboard-write" class="w-full sm:w-3/6 h-[300px] md:w-1/2 lg:w-[600px] lg:h-[400px]"></iframe></div>
             
             <!-- Content -->
             <div class="flex flex-1 flex-col items-center lg:items-start">
                 <h1 class="text-3xl text-custom-black">Centralised Dashboard</h1>
 
-                <p class="text-xl text-custom-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
+                <p class="text-xl text-custom-grey my-4 text-left lg:text-left sm:w-3/4 lg:w-full">
                     Our intuitive dashboard provides a seamless and user-friendly experience, giving you complete control over your forestry logistics. With just a few clicks, you can easily track, filter, and search through all your entries, ensuring that you have quick access to the information you need. It offers powerful tools for sorting and organising your entries, so you can focus on making informed decisions without the hassle of sifting through endless paperwork.
                 </p>
                 <h2 class="text-2xl text-custom-black mt-6">How it works</h2>

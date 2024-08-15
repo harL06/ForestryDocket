@@ -7,7 +7,7 @@
     <section class="relative overflow-hidden">
         <div class="container max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-1 mt-14 lg:mt-20 px-4">
             <!-- Content -->
-            <div class="flex flex-1 flex-col items-center lg:items-start">
+            <div class="flex flex-1 flex-col items-center">
                 <h2 class="text-custom-black text-4xl text-left lg:text-left mx-3 sm:mx-30 xl:mx-0">
                     More Information:
                 </h2>
@@ -84,13 +84,14 @@
         <section class="bg-custom-white py-20 mt-2 lg:mt-14 overflow-hidden">
         <!-- Feature #1 -->
         <div class="relative mt-0">
-        <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-22 px-4">
+            <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-22 px-4">
                 <!-- Image -->
                 <div class="flex justify-center flex-01  mb-10 md:ml-0 lg:ml-20">
                 <!-- Arcade Dashboard Demo -->
-                <iframe src="https://demo.arcade.software/o1VgfJm9P38oWGWxnBVq?embed&show_copy_link=true" title="LogWatch" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen
-                        allowfullscreen allow="clipboard-write" class="w-[400px] h-[267px] md:w-[600px] md:h-[600px] lg:w-[600px] lg:h-[400px] "></iframe></div>
-            
+                    <iframe src="https://demo.arcade.software/o1VgfJm9P38oWGWxnBVq?embed&show_copy_link=true" title="LogWatch" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen
+                        allowfullscreen allow="clipboard-write" class="w-[320px] h-[213px] min-[412px]:w-[400px] min-[412px]:h-[267px] md:w-[600px] md:h-[600px] lg:w-[600px] lg:h-[400px] "></iframe>
+                    </div>
+
             <!-- Content -->
             <div class="flex flex-1 flex-col items-center lg:items-start">
                 <h1 class="text-3xl text-custom-black mx-3 sm:mx-30 xl:mx-0">Centralised Dashboard</h1>
@@ -116,7 +117,18 @@
         </div>
         </section>
 
-
+        <section class="bg-custom-white py-20 mt-2 lg:mt-14 overflow-hidden">
+            <div class="relative mt-0">
+                <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-22 px-4">
+                    <div class="flex flex-1 flex-col items-center">
+                        <h1 class="text-center text-3xl text-custom-black mb-10 mx-3 sm:mx-30 xl:mx-0">Interested in seeing how LogWatch can help you?</h1>
+                        <div class="flex justify-center flex-wrap gap-6">
+                            <router-link class="btn btn-bold-green font-weight:bold" to="/join">Join Waiting List</router-link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer class="bg-custom-green py-8">

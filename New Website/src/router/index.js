@@ -56,6 +56,19 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+        return savedPosition;
+    } else if (to.hash) {
+        return {
+            el: to.hash,
+            behavior: 'smooth',
+            top: 100, // Adjust this to match your fixed header height or other offsets
+        };
+    } else {
+        return { top: 0 };
+    }
+}
 });
 
 // Navigation guard

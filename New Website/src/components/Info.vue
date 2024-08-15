@@ -16,7 +16,7 @@
     </section>
 
 
-    <section class="bg-custom-white py-20 mt-10 lg:mt-14 overflow-hidden">
+    <section class="bg-custom-white py-20 mt-10 lg:mt-14 overflow-hidden" id="dockets">
         <!-- Feature #1 -->
 
         <div class="relative mt-0">
@@ -57,7 +57,7 @@
         </div>
         </section>
 
-        <section class="bg-custom-white py-20 mt-2 lg:mt-14 overflow-hidden">
+        <section class="bg-custom-white py-20 mt-2 lg:mt-14 overflow-hidden" id="security">
         <!-- Feature #2 -->
         <div class="relative mt-0">
         <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-22 px-4">
@@ -81,7 +81,7 @@
         </section>
 
 
-        <section class="bg-custom-white py-20 mt-2 lg:mt-14 overflow-hidden">
+        <section class="bg-custom-white py-20 mt-2 lg:mt-14 overflow-hidden" id="dashboard">
         <!-- Feature #1 -->
         <div class="relative mt-0">
             <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-22 px-4">

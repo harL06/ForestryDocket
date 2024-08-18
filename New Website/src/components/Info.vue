@@ -136,7 +136,7 @@
                 <div class="flex flex-1 flex-wrap items-center justify-center md:justify-middle gap-12">
                     <!-- <img src="../assets/logo-custom-white.png" alt="" /> -->
                     <ul class="flex text-white  gap-12 text-xs">
-                        <li class="text-2xl">LogWatch</li>
+                        <router-link class="text-2xl" to="/">LogWatch</router-link>
                         <!-- <li class="cursor-pointer">Pricing</li>
                         <li class="cursor-pointer">Contact</li> -->
                     </ul>

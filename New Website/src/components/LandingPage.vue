@@ -253,6 +253,20 @@
         </div>
     </section> -->
 
+    <!-- Join Waiting List -->
+    <section class="bg-custom-white py-20 mt-0 lg:mt-0 lg:mb-0 overflow-hidden">
+            <div class="relative mt-40">
+                <div class="container max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-x-22 px-4">
+                    <div class="flex flex-1 flex-col items-center">
+                        <h1 class="text-center text-3xl text-custom-black mb-10 mx-3 sm:mx-30 xl:mx-0">Interested in seeing how LogWatch can help you?</h1>
+                        <div class="flex justify-center flex-wrap gap-6">
+                            <router-link class="btn btn-bold-green font-weight:bold" to="/join">Join Waiting List</router-link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     <!-- Footer -->
     <footer class="bg-custom-green py-8">
         <div class="container max-w-screen-xl mx-auto flex flex-col md:flex-row items-center px-4">

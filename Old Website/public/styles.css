@@ -18,6 +18,7 @@ h1 {
     background-color: #fff;
     width: 80%;
     max-width: 600px;
+    border-radius: 10px;
 }
 
 label {
@@ -40,6 +41,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:disabled {
@@ -102,13 +104,22 @@ button:disabled:hover {
 .radio-group {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* This allows items to wrap if necessary */
 }
 
 .radio-group label {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1; /* Ensure all labels take up equal space */
     padding: 5px;
+    text-align: center; /* Center the text for consistency */
+    min-width: 100px; /* Optional: Set a minimum width for consistency */
+}
+
+#vehicle-type-label, #product-type-label {
+    margin-bottom: 10px; /* Add some space below the labels */
+    font-weight: bold; /* Make the label bold for emphasis */
 }
 
 .spacer {
@@ -131,4 +142,49 @@ button:disabled:hover {
 #language-selector {
     padding: 5px;
     font-size: 16px;
+}
+
+/* Styling for nicer file upload button*/
+
+
+.file-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
+/* Hide the default file input */
+#fileInput {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Style the label as a button */
+.custom-file-upload {
+
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #4CAF50;
+    text-align: center;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+/* Style the icon inside the button */
+.custom-file-upload i {
+    margin-right: 10px; /* Spacing between the icon and the text */
 }

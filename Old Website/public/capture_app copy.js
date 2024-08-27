@@ -80,7 +80,7 @@ uploadButton.addEventListener('click', async (event) => {
         return;
       }
 
-      imageLink.textContent = `Image URL: ${publicUrl}`;
+      imageLink.textContent = `Image uploaded successfully.`;
       imageLink.href = publicUrl;
       localStorage.setItem('uploadedImageUrl', publicUrl);
 

@@ -12,6 +12,12 @@
     "other_label": "Other",
 
     "product_type": "Product Type:",
+    "sawlog_label": "Sawlog",
+    "pallet_label": "Pallet",
+    "stake_label": "Stake",
+    "pulp_label": "Pulp",
+
+
     "estimated_tonnage": "Estimated Tonnage (Tonnes):",
     "destination": "Destination:",
     "time_of_arrival": "Time of Arrival:",
